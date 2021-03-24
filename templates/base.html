@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    (% endblock %)
+    {% endblock %}
 
     {% block extra_meta %}
-    (% endblock %)
+    {% endblock %}
 
     {% block maincss %}
     <!-- CSS -->
@@ -28,10 +28,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
-    (% endblock %)
+    {% endblock %}
 
     {% block extra_css %}
-    (% endblock %)
+    {% endblock %}
 
     {% block mainscripts %}
     <!-- JavaScript -->
@@ -42,12 +42,12 @@
     ></script>
     <script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
-    (% endblock %)
+    {% endblock %}
 
     {% block extra_scripts %}
-    (% endblock %)
+    {% endblock %}
 
-    <title>MY & LINN {% block extra_text %}(% endblock %)</title>
+    <title>MY & LINN {% block extra_text %}{% endblock %}</title>
   </head>
 
   <body>
@@ -104,7 +104,7 @@
 
       {% if messages %}
       <!-- messages -->
-      <div class="row message-wrapper">
+        <div class="row message-wrapper">
         <div class="col">
           <p class="offers text-center my-5">
             SPECIAL OFFERS OR MESSAGING WILL SIT HERE
@@ -113,6 +113,12 @@
       </div>
       {% endif %}
 
+      {% block page_header %}
+      {% endblock %}
+
+
+      {% block content %}
+      {% endblock %}
 
 
 
@@ -162,5 +168,8 @@
         </div>
       </div>
     </footer>
+
+    {% block postloadjs %}
+    {% endblock %}
   </body>
 </html>
