@@ -4,3 +4,176 @@
 body {
     font-family: 'Playfair Display', 'Lucida Sans', 'Lucida Sans Regular';
 }
+
+.link,
+.link:hover,
+.link:active,
+.link:link,
+.link:visited,
+.link:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-icons {
+    font-size: 1.5rem;
+}
+
+.bi-justify-right {
+    font-size: 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+hr {
+    width: 70%;
+}
+
+/* HOME PAGE */
+
+.offers {
+    background-color: #131212;
+    padding: 10px;
+    color: #fff;
+}
+
+.hero-section {
+    background-image: url(/media/rings-hero.jpg);
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+}
+
+.hero-text {
+    font-size: 3rem;
+    margin-top: 50px;
+
+}
+
+.look-header {
+    font-size: 2rem;
+}
+
+.shop-now-container {
+    max-width: 500px;
+    height: auto;
+    max-width: 100%;
+}
+
+.shop-now__img {
+    max-width: 100%;
+}
+
+.recycle-section__container {
+    max-width: 100%;
+}
+
+.recycle-header__section {
+    max-width: 500px;
+}
+
+.recycle1__header {
+    font-size: 3rem;
+    margin-right: 50px
+}
+
+.recycle2__header {
+    font-size: 2.7rem;
+    margin-right: 20px
+}
+
+.recycle3__header {
+    font-size: 2.4rem;
+    margin-left: 50px
+}
+
+.about-recycle__section {
+    font-size: .85rem;
+}
+
+.learn-more__link {
+    display: flex;
+    justify-content: center;
+    font-size: .85rem;
+}
+
+.recycle-items__container {
+    max-width: 500px;
+}
+
+.spring__container {
+    max-width: 500px;
+}
+
+.spring__header {
+    font-size: 2rem;
+}
+
+.spring__img {
+    max-width: 500px;
+    width: 50%;
+}
+
+.best-sellers__header {
+    font-size: 2rem;
+}
+
+.value__text {
+    font-size: .8rem;
+}
+
+.bi-globe {
+    font-size: 3rem;
+}
+
+.bi-arrow-repeat {
+    font-size: 3rem;
+}
+
+.bi-emoji-sunglasses {
+    font-size: 3rem;
+}
+
+footer {
+    background-color: #131212;
+    width: 100%;
+    padding: 1.3rem;
+}
+
+.footer-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.footer-socials {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.copyright__text {
+    font-size: .8rem;
+    color: #fff;
+}
+
+.bi-heart-fill {
+    color: #d03623;
+}
