@@ -7,22 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% endblock %} {% block extra_meta %} {% endblock %} {% block maincss %}
+    {% endblock %} 
+
+    {% block extra_meta %} 
+    {% endblock %} 
+    
+    {% block maincss %}
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{% static 'css/mmenu.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mburger.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mhead.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    {% endblock %} {% block extra_css %} {% endblock %} {% block mainscripts %}
+    {% endblock %} 
+
+    {% block extra_css %} 
+    {% endblock %} 
+    
+    {% block mainscripts %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
-    {% endblock %} {% block extra_scripts %} {% endblock %}
+    <script src="{% static 'js/mmenu.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/mburger.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/mhead.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/mainscript.js' %}" type="text/javascript"></script>
+    {% endblock %} 
+
+    {% block extra_scripts %} 
+    {% endblock %}
 
     <title>MY & LINN {% block extra_text %}{% endblock %}</title>
   </head>
@@ -31,27 +49,18 @@
     <header class="container-fluid fixed-top"></header>
 
     <!-- container -->
-    <div class="container-fluid index__container">
+    <div id="my-page" class="container-fluid index__container">
       <!-- nav -->
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-light nav__wrapper container-fluid justify-content-center w-100"
-      >
+      <header id="my-header" class="navbar navbar-expand-lg navbar-light bg-light nav__wrapper container-fluid justify-content-center w-100">
         <div class="row w-100">
           <div class="col justify-content-center">
-            <div class="nav-item">
-                <button
-                class="navbar-toggler ms- border-0"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                >
-                <i class="bi bi-justify-right"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <a class="mburger mburger--tornado" href="#my-menu">
+                    <b></b>
+                    <b></b>
+                    <b></b>
+                </a>
+                <nav id="my-menu">
+                    <ul>
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <li class="nav-item">
@@ -103,8 +112,7 @@
                             </li>
                         {% endif %}
                     </ul>
-                </div>
-            </div>
+                </nav>
           </div>
           <div class="col justify-content-center mx-auto">
             <div class="nav-item">
@@ -145,9 +153,7 @@
                                     class="form-control btn rounded"
                                     type="submit"
                                     >
-                                    <!-- <span>
-                                                        <i class="bi bi-search me-4"></i>
-                                                    </span> -->
+
                                     </button>
                                 </div>
                                 </div>
@@ -177,7 +183,7 @@
             </div>
           </div>
         </div>
-      </nav>
+    </header>
 
       {% if messages %}
       <!-- messages -->
