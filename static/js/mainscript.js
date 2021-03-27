@@ -4,7 +4,7 @@ Mmenu.configs.classNames.selected = "active";
             document.addEventListener(
                 "DOMContentLoaded", () => {
                     const menu = new Mmenu( "#my-menu", {
-                        slidingSubmenus: false,
+                        slidingSubmenus: true,
                         onClick: {
                             close: true
                         },

@@ -51,151 +51,28 @@
     <!-- container -->
     <div id="my-page" class="container-fluid index__container">
       <!-- nav -->
-      <header id="my-header" class="navbar navbar-expand-lg navbar-light bg-light nav__wrapper container-fluid justify-content-center w-100">
-        <div class="row w-100">
-          <div class="col justify-content-center">
-                <a class="mburger mburger--tornado" href="#my-menu">
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                </a>
-                <nav id="my-menu">
-                    <ul>
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Product Management</a>
-                                </li>
-                            {% endif %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">My Account</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                            </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Bracelets</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Rings</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Necklaces</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">All Pieces</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sustainability</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Support</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">FAQ</a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </nav>
-          </div>
-          <div class="col justify-content-center mx-auto">
-            <div class="nav-item">
-                <a href="{% url 'home' %}" class="navbar-brand mx-auto logo">
-                MY & LINN
-                </a>
-            </div>
-          </div>
-          <div class="col justify-content-center mx-auto">
-            <div class="row nav-icons">
-                <div class="col">
-                    <div class="nav-item">
-                        <div class="dropstart">
-                        <a
-                            class="btn dropdown-toggle"
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            <i class="bi bi-search me-4"></i>
-                        </a>
-                        <ul
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton1"
-                        >
-                            <li>
-                            <form method="GET" action="">
-                                <div class="input-group w-100">
-                                <input
-                                    class="form-control rounded"
-                                    type="text"
-                                    name="query"
-                                    placeholder="Search our site"
-                                />
-                                <div class="input-group-append">
-                                    <button
-                                    class="form-control btn rounded"
-                                    type="submit"
-                                    >
-
-                                    </button>
-                                </div>
-                                </div>
-                            </form>
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="nav-item">
-                        <a href="#" class="{% if grand_total %} font-weight-bold{% else %}text-secondary{% endif %} nav-link">
-                            <div class="text-center">
-                                <div><i class="bi bi-basket me-5"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        SEK{{ grand_total|floatformat:3 }
-                                    {% else %}
-                                        SEK 0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
+      <header id="my-header" class="navbar navbar-expand-lg navbar-light bg-light nav__wrapper container-fluid justify-content-center w-100 nav-fill">
+        {% include 'includes/main-nav.html' %}
     </header>
 
-      {% if messages %}
+      
       <!-- messages -->
       <div class="row message-wrapper">
         <div class="col">
-          <p class="offers text-center my-5">
+          <p class="offers text-center">
             SPECIAL OFFERS OR MESSAGING WILL SIT HERE
           </p>
         </div>
       </div>
-      {% endif %} {% block page_header %} {% endblock %} 
-      {% block content %} {% endblock %}
+
+      {% if messages %}
+      {% endif %} 
+
+      {% block page_header %} 
+      {% endblock %} 
+
+      {% block content %} 
+      {% endblock %}
 
       <!-- values footer -->
       <div class="row my-5">

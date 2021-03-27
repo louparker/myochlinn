@@ -1,0 +1,141 @@
+<div class="row w-100">
+          <div class="col justify-content-center">
+                <a class="mburger mburger--tornado" href="#my-menu">
+                    <b></b>
+                    <b></b>
+                    <b></b>
+                </a>
+                <nav id="my-menu">
+                    <ul>
+                        <li class="nav-item"><span>The Collection</span>
+                            <ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">New Creations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Bracelets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Rings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Necklaces</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Exclusives</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">All Pieces</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sustainab ility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Product Management</a>
+                                </li>
+                            {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                            </li>
+                        {% else %}
+                            
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                            </li>
+                            
+                        {% endif %}
+                    </ul>
+                </nav>
+          </div>
+          <div class="col justify-content-center mx-auto">
+            <div class="nav-item">
+                <a href="{% url 'home' %}" class="navbar-brand mx-auto logo">
+                MY & LINN
+                </a>
+            </div>
+          </div>
+          <div class="col justify-content-center mx-auto">
+            <div class="row nav-icons">
+                <div class="col">
+                    <div class="nav-item">
+                        <div class="dropstart">
+                        <a
+                            class="btn"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <i class="bi bi-search"></i>
+                        </a>
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                        >
+                            <li>
+                            <form method="GET" action="">
+                                <div class="input-group w-100">
+                                <input
+                                    class="form-control rounded"
+                                    type="text"
+                                    name="query"
+                                    placeholder="Search our site"
+                                />
+                                <div class="input-group-append">
+                                    <button
+                                    class="form-control btn rounded"
+                                    type="submit"
+                                    >
+
+                                    </button>
+                                </div>
+                                </div>
+                            </form>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="nav-item">
+                        <a href="#" class="{% if grand_total %} font-weight-bold{% else %}text-secondary{% endif %} nav-link">
+                            <div class="text-center">
+                                <div><i class="bi bi-basket"></i></div>
+                                <p class="my-0 fs-6">
+                                    {% if grand_total %}
+                                        SEK{{ grand_total|floatformat:3 }
+                                    {% else %}
+                                        SEK 0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
