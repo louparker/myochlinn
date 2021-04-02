@@ -97,12 +97,12 @@
                             aria-labelledby="dropdownMenuButton1"
                         >
                             <li>
-                            <form method="GET" action="">
+                            <form method="GET" action="{% url 'products' %}">
                                 <div class="input-group w-100">
                                 <input
                                     class="form-control rounded"
                                     type="text"
-                                    name="query"
+                                    name="q"
                                     placeholder="Search our site"
                                 />
                                 <div class="input-group-append">
