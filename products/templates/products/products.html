@@ -20,13 +20,13 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 mb-5">
                         {% if product.image %}
-                        <a href="">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img src="{{ product.image.url }}" class="card-img-top" alt="image of {{ product.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img src="https://res.cloudinary.com/ivanprojects/image/upload/v1617135607/send-it-images/no-image_e47frw.jpg" class="card-img-top" alt="image stating {{ product.name }} has no image">
                         </a>
                         {% endif %}
