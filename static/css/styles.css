@@ -53,6 +53,14 @@ hr {
     width: 70%;
 }
 
+.message-heart {
+    color: #db504a;
+}
+
+.message-truck {
+    color: #faf0ca;
+}
+
 /* HOME PAGE */
 
 .offers {

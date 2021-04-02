@@ -3,6 +3,30 @@
 
 {% block content %}
 
+<div class="container">
+    <div class="row">
+        <div class="col my-5">
+            <h1 class="text-center">Shopping Bag</h1>
+        </div>
+    </div>
+    <hr class="mb-5 mx-auto">
 
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+                <div class="table-responsive rounded">
+
+                </div>
+            {% else %}
+                <p class="mb-4 text-center">Nothing in your bag at the moment!</p>
+                <div class="d-flex justify-content-center">
+                <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
+                    <span class="text-uppercase">Continue Shopping</span>
+                </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
