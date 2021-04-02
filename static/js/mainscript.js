@@ -1,3 +1,4 @@
+/* nav menu functionality */
 Mmenu.configs.classNames.selected = "active";
             Mmenu.configs.offCanvas.page.selector = "#my-page";
 
