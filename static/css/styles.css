@@ -73,6 +73,10 @@ hr {
     z-index: 999999999;
 }
 
+.toast-close {
+    background-color: #fff;
+}
+
 .custom-toast {
     overflow: visible;
 }
