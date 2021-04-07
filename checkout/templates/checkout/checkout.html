@@ -71,7 +71,7 @@
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
-                <fieldset class="rounded px-3 my-5">
+                <fieldset class="rounded my-5">
                     <legend class="fieldset-label small text-dark px-2 w-auto">Delivery Information</legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
@@ -162,6 +162,22 @@
     };
     var card = elements.create('card', {style: style});
     card.mount('#card-element');
+
+    // handle reltime validation errors on card element.
+card.addEventListener('change', function(event) {
+    var errorDiv = document.getElementById('card-errors');
+    if (event.error) {
+        var html = `
+            <span class="icon" role="alert">
+                <i class="bi bi-x"></i>
+            </span>
+            <span>${event.error.message}</span>
+        `;
+        $(errorDiv).html(html);
+    } else {
+        errorDiv.textContent = ''
+    }
+});
 
     </script>
 {% endblock %}
