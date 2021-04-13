@@ -1,3 +1,13 @@
+select,
+select option {
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aaacad !important;
+}
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
