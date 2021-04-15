@@ -1,0 +1,21 @@
+Dear {{ order.full_name }},
+
+This is to confirm that we have received your order. It is currently being created and we will contact you again when it is ready to be shipped.
+
+Order Details:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to: 
+{{ order.street_address1 }}, 
+{{ order.town_or_city }}, 
+{{ order.country }}.
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Kind regards,
+My & Linn
