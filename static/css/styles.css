@@ -327,3 +327,9 @@ footer {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+/* checkout success back to button arrow icon */
+
+.bi-caret-left-fill {
+    color: #fff;
+}
