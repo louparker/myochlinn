@@ -39,6 +39,37 @@
                         <div class="card-body">
                             <p class="card-text fs-1 text-center">{{ product.name }}</p>
                             <p class="card-text fs-4 text-center price-font">{{ product.price}}</p>
+                            {% if request.user.is_superuser %}
+                                <!-- edit product button -->
+                                <a href="{% url 'edit_product' product.id %}">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+
+                                <!-- delete product modal button -->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="delete__icon" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModal" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete {{ product.name}}?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="{% url 'delete_product' product.id %}" type="button" class="btn btn-danger">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
