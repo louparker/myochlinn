@@ -361,3 +361,12 @@ footer {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+/* collapse product detail */
+
+.custom-collapse-content,
+#collapseExample.in,
+#collapseExample.collapsing {
+  width: 100%;
+  display: inline-block;
+}

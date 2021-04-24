@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, ProductReview
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
 
@@ -41,6 +41,18 @@ def product_detail(request, product_id):
     """ This view shows specific product information """
 
     products = get_object_or_404(Product, pk=product_id)
+
+    # Add Review
+
+    if request.method == 'POST' and request.user.is_authenticated:
+        stars = request.POST.get('stars', 3)
+        content = request.POST.get('content', '')
+
+        print(stars, content)
+
+        review = ProductReview.objects.create(product=Product, user=request.user, stars=stars, content=content)
+
+        """ return redirect(reverse('product_detail', args=[products.id])) """
 
     context = {
         'product': products,
