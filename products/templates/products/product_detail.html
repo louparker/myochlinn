@@ -89,6 +89,7 @@
                                                         <strong>Date: </strong>{{ review.date_added| date:"Y-m-d" }},
                                                         <strong>Stars: </strong>{{ review.stars}}
                                                         {{ review.content }}
+                                                        <strong>By: {{ review.user }}</strong>
                                                     </p>
                                                 {% empty %}
                                                     <p>No reviews yet...</p>

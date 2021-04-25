@@ -75,6 +75,17 @@
                 </div>
                 {% endfor %}
             </div>
+            <div class="row">
+                <div class="col mx-auto">
+                    {% if products.has_previous %}
+                    <a href="{% url 'products' %}?page={{products.previous_page_number}}">Previous Page</a>
+                    {% endif %}
+                    {% if products.has_next %}
+                    <a href="{% url 'products' %}?page={{products.next_page_number}}">Next Page</a>
+                    {% endif %}
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

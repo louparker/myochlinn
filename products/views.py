@@ -4,19 +4,28 @@ from django.db.models import Q
 from .models import Product, Category, ProductReview
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage
 
 
 def all_products(request):
     """ This view shows all products and also sorting and search queries """
 
     products = Product.objects.all()
+    p = Paginator(products, 8)
+    page_num = request.GET.get('page', 1)
+    try:
+        page = p.page(page_num)
+    except EmptyPage:
+        page = p.page(1)
+    print(page)
+
     query = None
     categories = None
 
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
+            page = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
@@ -26,10 +35,10 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+            page = products.filter(queries)
 
     context = {
-        'products': products,
+        'products': page,
         'search_term': query,
         'current_categories': categories,
     }
@@ -48,11 +57,8 @@ def product_detail(request, product_id):
         stars = request.POST.get('stars', 3)
         content = request.POST.get('content', '')
 
-        print(stars, content)
-
-        review = ProductReview.objects.create(product=Product, user=request.user, stars=stars, content=content)
-
-        """ return redirect(reverse('product_detail', args=[products.id])) """
+        review = ProductReview.objects.create(product=products, user=request.user, stars=stars, content=content)
+        messages.success(request, 'Successfully added review!')
 
     context = {
         'product': products,
