@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from .models import Post
-from .forms import BlogForm
+from .forms import BlogForm, CommentForm
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage
 
@@ -34,11 +34,24 @@ def post_detail(request, post_id):
 
     posts = get_object_or_404(Post, pk=post_id)
 
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = posts
+            comment.save()
+
+            return redirect(reverse('post_detail', args=[posts.id]))
+    else:
+        form = CommentForm()
+
     context = {
         'post': posts,
+        'form': form,
     }
 
-    return render(request, 'posts/post_detail.html', context)
+    return render(request, 'blog/post_detail.html', context)
 
 
 @login_required

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container h-100">
+
+    <div class="row">
+        <h1>{{ post.title }}</h1>
+        <div class="col-12 col-md-6">
+            <div class="product-image-container my-5">
+                {% if post.image %}
+                    <a href="{{ post.image.url }}" target="_blank">
+                        <img src="{{ post.image.url }}" class="card-img-top" alt="image of {{ post.title }}">
+                    </a>
+                {% else %}
+                    <a href="">
+                        <img src="https://res.cloudinary.com/ivanprojects/image/upload/v1617135607/send-it-images/no-image_e47frw.jpg" class="card-img-top" alt="image stating {{ post.title }} has no image">
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h3><strong>{{ post.preview }}</strong></h3>
+            <p>{{ post.section_one }}</p>
+            <p>{{ post.section_two }}</p>
+            <p>{{ post.section_three }}</p>
+            <small>Words by: {{ post.author }}.</small>
+            <small>Posted on: {{ post.date_added }}.</small>
+        </div>
+    </div>
+    <hr class="my-5 mx-auto">
+    <div class="row">
+        <div class="col">
+            <h3>Comments</h3>
+
+            {% for comment in post.comments.all %}
+                <h5>
+                    <strong>{{ comment.name }}</strong>
+                    <br>
+                    <p class="fs-6">{{ comment.date_added }}</p>
+                </h5>
+                <p>{{ comment.body }}</p>
+            {% empty %}
+                <p>No Comments Yet</p>
+            {% endfor %}
+
+            <hr class="my-2 mx-auto">
+
+            <h3>Add Comment</h3>
+
+            <form method="POST" action=".">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-secondary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}

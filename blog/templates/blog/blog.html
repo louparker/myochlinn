@@ -14,12 +14,64 @@
 <main>
     <div class="container">
         <div class="row">
-            <h1 class="blog-title text-center mx-3">Words by My & Linn</h1>
-            <div class="col-lg-6">
+            <h1 class="blog-title text-center mb-4 mt-3">Words by My & Linn</h1>
+            <!-- <div class="col-lg-6">
                 <img src="https://s3.eu-west-2.amazonaws.com/luxurylondon.co.uk-storage-bucket-001/images/020221115620/billboard/sustainable-jewellery-brands.jpg" class="post-image" alt="Image representing blog post">
             </div>
             <div class="col-lg-6">
                 
+            </div> -->
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0 mb-5">
+                        {% if post.image %}
+                        <a href="{% url 'post_detail' post.id %}">
+                            <img src="{{ post.image.url }}" class="card-img-top" alt="image of {{ post.title }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'post_detail' post.id %}">
+                            <img src="https://res.cloudinary.com/ivanprojects/image/upload/v1617135607/send-it-images/no-image_e47frw.jpg" class="card-img-top" alt="image stating {{ post.title }} has no image">
+                        </a>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="card-text fs-1 text-center">{{ post.title }}</p>
+                            <p class="card-text fs-4 text-center">{{ post.preview}}</p>
+                            {% if request.user.is_superuser %}
+                                <!-- edit post button -->
+                                <a href="{% url 'edit_post' post.id %}">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+
+                                <!-- delete post modal button -->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="delete__icon" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModal" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete {{ post.title}}?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="{% url 'delete_post' post.id %}" type="button" class="btn btn-danger">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
