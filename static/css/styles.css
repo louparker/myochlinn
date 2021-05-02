@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
 
 body {
-    font-family: 'Playfair Display', 'Lucida Sans', 'Lucida Sans Regular';
+    font-family: 'Biryani', 'Lucida Sans', 'Lucida Sans Regular';
     background-color: #d6d7d8;
 }
 
@@ -154,6 +155,13 @@ input[name='q']::placeholder {
 }
 
 .hero-section {
+    background-image: url(/media/rings-hero.jpg);
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+}
+
+.hero-section-2 {
     background-image: url(/media/rings-hero.jpg);
     background-size: cover;
     height: 700px;
@@ -388,3 +396,51 @@ footer {
   display: inline-block;
 }
 
+.spring-img-1 {
+    max-width: 670px;
+    max-height: 700px;
+}
+
+.spring-img-2 {
+    max-width: 340px;
+    max-height: 370px;
+    
+}
+
+.spring-img-3 {
+    max-width: 340px;
+    max-height: 370px;
+}
+
+.spring-img-section {
+    max-width: 992px;
+}
+
+.bespoke-section {
+    
+}
+
+.bespoke-header-img {
+    background-image: url(https://res.cloudinary.com/ivanprojects/image/upload/v1619981676/bespoke_ybtln2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    color: #fff;
+}
+
+.category-img {
+    max-height: 600px;
+    position: relative;
+}
+
+.category-img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* media queries */

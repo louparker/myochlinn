@@ -5,16 +5,68 @@
 
 <div class="container h-100">
 <!-- hero content -->
-    <div class="row">
-      <div class="col hero-section">
+    <div class="row d-flex">
+      <div class="col-md hero-section mx-2">
+        <p class="hero-text">Sterling Silver</p>
+      </div>
+      <div class="col-md hero-section-2 mx-2">
         <p class="hero-text">Sterling Silver</p>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <h3 class="look-header text-center my-5">Shop The Look</h3>
+        <h3 class="look-header text-center my-5 py-4 w-50 mx-auto">SPRING ESSENTIALS</h3>
       </div>
     </div>
+    <div class="spring-img-section d-flex flex-column align-items-center mx-auto mb-5">
+        <div class="row">
+            <div class="col spring-img-1">
+                <img src="{{MEDIA_URL}}neck1.jpg" class="img-fluid" alt="A size chart">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col spring-img-2 p-3">
+                <img src="{{MEDIA_URL}}neck2.jpg" class="img-fluid" alt="A size chart">
+            </div>
+            <div class="col spring-img-3 p-3">
+                <img src="{{MEDIA_URL}}neck3.jpg" class="img-fluid" alt="A size chart">
+            </div>
+        </div>
+    </div>
+    <div class="row bespoke-section">
+        <div class="col bespoke-header-img">
+            <h3 class="look-header text-center my-5 py-4 w-50 mx-auto">SUSTAINABLY PRODUCED</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3 class="look-header text-center my-5 py-4 w-50 mx-auto">SHOP BY CATEGORY</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md category-img my-2">
+            <img src="https://res.cloudinary.com/ivanprojects/image/upload/v1619987323/category1_chjk2q.jpg" class="img-fluid" alt="image of rings">
+            <a class="nav-link" href="{% url 'products' %}?category=rings">
+                <h5 class="category-img-text py-3 px-5 rounded">RINGS</h5>
+            </a>
+            
+        </div>
+        <div class="col-md category-img my-2">
+            <img src="https://res.cloudinary.com/ivanprojects/image/upload/v1619987323/category2_qs03yu.jpg" class="img-fluid" alt="image of rings">
+            <a class="nav-link" href="{% url 'products' %}?category=bracelets">
+                <h5 class="category-img-text py-3 px-5 rounded">BRACELETS</h5>
+            </a>
+            
+        </div>
+        <div class="col-md category-img my-2">
+            <img src="https://res.cloudinary.com/ivanprojects/image/upload/v1619987323/category3_gnxdfp.jpg" class="img-fluid" alt="image of rings">
+            <a class="nav-link" href="{% url 'products' %}?category=necklaces">
+                <h5 class="category-img-text py-3 px-5 rounded">NECKLACES</h5>
+            </a>
+            
+        </div>
+    </div>
+    
 </div>
 
 {% endblock %}
