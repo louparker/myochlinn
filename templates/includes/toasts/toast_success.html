@@ -1,13 +1,11 @@
-<div class="toast custom-toast rounded-0-border-top-0" autohide="false" role="alert">
-    <div class="arrow-up arrow-success"></div>
-    <div class="w-100 toast-capper bg-success"></div>
-    <div class="toast-header bg-white text-dark">
-        <strong class="mx-auto">SUCCESS!</strong>
-        <button type="button" class="ml-5 mb-1 close text-dark border-0 toast-close" data-bs-dismiss="toast" aria-label="Close">
-            <i class="bi bi-x-circle"></i>
+<div class="toast custom-toast rounded-border-top-0" data-bs-animation="true" autohide="false" role="alert">
+    <div class="toast-header bg-transparent text-dark">
+        <strong class="mx-auto fs-5">DONE! &#128578;</strong>
+        <button type="button" class="ml-5 mb-1 close text-dark bg-transparent border-0 toast-close" data-bs-dismiss="toast" aria-label="Close">
+            <i class="bi bi-x-circle fs-5"></i>
         </button>
     </div>
-    <div class="toast-body bg-white text-center">
+    <div class="toast-body bg-transparent text-center">
         <div class="row">
             <div class="col">
                 {{ message }}
@@ -15,7 +13,7 @@
             </div>
         </div>
         {% if grand_total and not on_profile_page %}
-            <p class="logo-font bg-white text-dark py-1">Your Bag ({{ product_count }})</p>
+            <p class="logo-font bg-transparent text-dark py-1">Your Bag ({{ product_count }})</p>
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                     <div class="row">
@@ -37,7 +35,7 @@
             <div class="row">
                 <div class="col">
                     <a href="{% url 'view_bag' %}" class="btn btn-block rounded">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span class="text-uppercase">Secure Checkout</span>
                         <span class="icon">
                             <i class="bi bi-lock-fill"></i>
                         </span>

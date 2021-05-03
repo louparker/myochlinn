@@ -155,15 +155,16 @@ input[name='q']::placeholder {
 }
 
 .hero-section {
-    background-image: url(/media/rings-hero.jpg);
+    background-image: url(/media/hero1.jpg);
     background-size: cover;
     height: 700px;
     width: 100%;
 }
 
 .hero-section-2 {
-    background-image: url(/media/rings-hero.jpg);
+    background-image: url(/media/hero2.jpg);
     background-size: cover;
+    background-position: center;
     height: 700px;
     width: 100%;
 }
