@@ -473,3 +473,17 @@ footer {
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
+
+/* products templates */
+/* products page */
+.delete__icon {
+    cursor: pointer;
+}
+
+/* about us page */
+
+.sister-text {
+    width: 60vw;
+    max-width: 768px;
+    margin: 0 auto 50px auto;
+}

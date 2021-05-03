@@ -27,7 +27,7 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0 mb-5">
+                    <div class="card h-70 border-0 mb-5">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img src="{{ product.image.url }}" class="card-img-top" alt="image of {{ product.name }}">
@@ -37,20 +37,20 @@
                             <img src="https://res.cloudinary.com/ivanprojects/image/upload/v1617135607/send-it-images/no-image_e47frw.jpg" class="card-img-top" alt="image stating {{ product.name }} has no image">
                         </a>
                         {% endif %}
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <p class="card-text fs-1 text-center test">{{ product.name }}</p>
                             <p class="card-text fs-4 text-center price-font">{{ product.price}}</p>
                             {% if request.user.is_superuser %}
                                 <!-- edit product button -->
-                                <a href="{% url 'edit_product' product.id %}">
-                                    <i class="bi bi-pencil-square"></i>
+                                <a href="{% url 'edit_product' product.id %}" class="link">
+                                    <i class="bi bi-pencil-square fs-3"></i>
                                 </a>
 
                                 <!-- delete product modal button -->
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="delete__icon" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
+                                    <a class="delete__icon link" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                                        <i class="bi bi-trash fs-3"></i>
+                                    </a>
 
                                     <!-- Modal -->
                                     <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModal" aria-hidden="true">

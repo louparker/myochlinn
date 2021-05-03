@@ -28,19 +28,16 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'posts' %}">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Support</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ</a>
+                            <a class="nav-link" href="{% url 'support' %}">Support/FAQ</a>
                         </li>
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}

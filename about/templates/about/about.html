@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container h-100">
+
+    <h1 class="text-center my-5">ABOUT US</h1>
+
+    <div class="row">
+        <div class="col mx-auto">
+            <h3 class="text-center mb-3">Sister Act</h3>
+            <p class="text-center sister-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. A iaculis at erat pellentesque adipiscing. Vel quam elementum pulvinar etiam non quam lacus. Gravida arcu ac tortor dignissim convallis aenean. Lobortis feugiat vivamus at augue eget arcu. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. A diam maecenas sed enim ut sem viverra aliquet. Tincidunt id aliquet risus feugiat in ante metus dictum. Aliquam ultrices sagittis orci a scelerisque purus. Nibh praesent tristique magna sit amet.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <h3 class="text-center">My</h3>
+            <img src="{{MEDIA_URL}}my.jpg" class="img-fluid" alt="A picture of site owner My">
+        </div>
+
+        <div class="col-md">
+            <h3 class="text-center">Linn</h3>
+            <img src="{{MEDIA_URL}}linn.jpg" class="img-fluid" alt="A picture of site owner Linn">
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

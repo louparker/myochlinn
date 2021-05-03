@@ -22,20 +22,20 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center">
-                    <div class="product_detail_container">
+                    <div class="product_detail_container text-center">
                         <p class="text-center fs-2 text-uppercase">{{ product.name }}</p>
                         <p class="lead mb-5 text-center price-font">SEK{{ product.price }}</p>
                         {% if request.user.is_superuser %}
                             <!-- edit product button -->
-                            <a href="{% url 'edit_product' product.id %}">
-                                <i class="bi bi-pencil-square"></i>
+                            <a href="{% url 'edit_product' product.id %}" class="link">
+                                <i class="bi bi-pencil-square fs-3"></i>
                             </a>
 
                             <!-- delete product modal button -->
                                 <!-- Button trigger modal -->
-                                <button type="button" class="delete__icon" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
-                                    <i class="bi bi-trash"></i>
-                                </button>
+                                <a type="button" class="delete__icon link" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                                    <i class="bi bi-trash fs-3"></i>
+                                </a>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModal" aria-hidden="true">
@@ -149,6 +149,32 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="details-accordion-wrapper mx-auto">
+                            <div class="accordion accordion-flush" id="details-accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="accordion-size">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-size-collapse" aria-expanded="false" aria-controls="accordion-size-collapse">
+                                        Size Guide
+                                    </button>
+                                    </h2>
+                                    <div id="accordion-size-collapse" class="accordion-collapse collapse" aria-labelledby="accordion-size" data-bs-parent="#details-accordion">
+                                    <div class="accordion-body"><img src="{{MEDIA_URL}}size.png" class="card-img-top" alt="A size chart"></div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="accordion-care">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-care-collapse" aria-expanded="false" aria-controls="accordion-care-collapse">
+                                        Care Guide
+                                    </button>
+                                    </h2>
+                                    <div id="accordion-care-collapse" class="accordion-collapse collapse" aria-labelledby="accordion-care" data-bs-parent="#details-accordion">
+                                    <div class="accordion-body"><img src="{{MEDIA_URL}}care.png" class="card-img-top" alt="A size chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         
                         <hr class="my-5 mx-auto">
 
