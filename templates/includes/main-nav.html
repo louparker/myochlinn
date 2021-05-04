@@ -1,5 +1,5 @@
 <div class="row w-100">
-          <div class="col justify-content-center">
+          <div class="col d-flex align-items-center">
                 <a class="link mburger mburger--tornado" href="#my-menu">
                     <b></b>
                     <b></b>
@@ -69,17 +69,17 @@
                 </nav>
           </div>
           <div class="col justify-content-center mx-auto d-flex align-items-center">
-            <div class="nav-item p-3">
+            <div class="nav-item p-1">
                 <a href="{% url 'home' %}" class="navbar-brand mx-auto logo">
                 MY & LINN
                 </a>
             </div>
           </div>
           <div class="col justify-content-center mx-auto">
-            <div class="row nav-icons">
-                <div class="col">
+            <div class="row nav-icons d-flex align-items-center">
+                <div class="col d-flex align-items-center">
                     <div class="nav-item">
-                        <div class="dropstart">
+                        <div class="dropdown">
                         <a
                             class="btn"
                             type="button"
@@ -90,7 +90,7 @@
                             <i class="bi bi-search"></i>
                         </a>
                         <ul
-                            class="dropdown-menu"
+                            class="dropdown-menu border-0 bg-transparent"
                             aria-labelledby="dropdownMenuButton1"
                         >
                             <li>
@@ -116,10 +116,8 @@
                         </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col">
                     <div class="nav-item">
-                        <a href="{% url 'view_bag' %}" class="{% if grand_total %} font-weight-bold{% else %}text-secondary{% endif %} nav-link">
+                        <a href="{% url 'view_bag' %}" class="{% if grand_total %} font-weight-bold{% else %}text-secondary{% endif %} nav-link link">
                             <div class="text-center">
                                 <div><i class="bi bi-basket"></i></div>
                                 <p class="my-0 fs-6">
