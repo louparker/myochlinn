@@ -1,10 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
 
+@font-face {
+  font-family: "Stanley";
+  src: url("fonts/Stanley.otf");
+}
+
+@font-face {
+  font-family: "Emberly Bold";
+  src: url("fonts/Emberly-Bold.otf");
+}
+
+@font-face {
+  font-family: "Emberly Narrow";
+  src: url("fonts/Emberly-Narrow.otf");
+}
+
+@font-face {
+  font-family: "Emberley Thin";
+  src: url("fonts/Emberly-Thin.otf");
+}
+
 body {
-    font-family: 'Biryani', 'Lucida Sans', 'Lucida Sans Regular';
+    font-family: 'Emberly Medium', 'Lucida Sans', 'Lucida Sans Regular';
     background-color: #d6d7d8;
 }
 
@@ -20,7 +37,7 @@ body {
 }
 
 .price-font  {
-    font-family: 'Lato', 'Lucida Sans' !important;
+    font-family: 'Emberly Medium', 'Lucida Sans' !important;
     font-weight: 700 !important;
 }
 
@@ -53,7 +70,8 @@ img {
 }
 
 .logo {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-family: "Stanley";
 }
 
 hr {
@@ -457,24 +475,36 @@ footer {
     font-size: 1.1rem;
 }
 
+/* contact templates */
+/* contact page */
+
+.contact-text {
+    max-width: 70vw;
+}
+
 /* media queries */
 
 @media (min-width: 420px) { 
     .logo {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .logo-and {
+    font-size: 1rem;
     }
 }
 
 @media (min-width: 576px) { 
     .logo {
-        font-size: 2rem;
+        font-size: 3rem;
+    }
+    .logo-and {
+    font-size: 1.5rem;
     }
 }
 
 @media (min-width: 768px) {
-    .logo {
-        font-size: 2.5rem;
-    }
+
 }
 
 @media (min-width: 992px) {
