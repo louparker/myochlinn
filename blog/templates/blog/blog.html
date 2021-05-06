@@ -14,17 +14,12 @@
 <main>
     <div class="container">
         <div class="row">
-            <h1 class="blog-title text-center mb-4 mt-3">Words by My & Linn</h1>
-            <!-- <div class="col-lg-6">
-                <img src="https://s3.eu-west-2.amazonaws.com/luxurylondon.co.uk-storage-bucket-001/images/020221115620/billboard/sustainable-jewellery-brands.jpg" class="post-image" alt="Image representing blog post">
-            </div>
-            <div class="col-lg-6">
-                
-            </div> -->
+            <h1 class="blog-title text-center my-5">Words by ...  <span class="logo-font blog-title-logo">MY & LINN</span></h1>
             <div class="row">
+            <hr class="my-5 mx-auto">
                 {% for post in posts %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0 mb-5">
+                    <div class="card h-100 border-0 mb-5 text-center">
                         {% if post.image %}
                         <a href="{% url 'post_detail' post.id %}">
                             <img src="{{ post.image.url }}" class="card-img-top" alt="image of {{ post.title }}">
@@ -39,15 +34,15 @@
                             <p class="card-text fs-4 text-center">{{ post.preview}}</p>
                             {% if request.user.is_superuser %}
                                 <!-- edit post button -->
-                                <a href="{% url 'edit_post' post.id %}">
-                                    <i class="bi bi-pencil-square"></i>
+                                <a href="{% url 'edit_post' post.id %}" class="link">
+                                    <i class="bi bi-pencil-square fs-3"></i>
                                 </a>
 
                                 <!-- delete post modal button -->
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="delete__icon" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
+                                    <a class="delete__icon link" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                                        <i class="bi bi-trash fs-3"></i>
+                                    </a>
 
                                     <!-- Modal -->
                                     <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModal" aria-hidden="true">
@@ -72,6 +67,7 @@
                     </div>
                 </div>
                 {% endfor %}
+                <hr class="my-5 mx-auto">
             </div>
         </div>
     </div>

@@ -98,7 +98,7 @@ def edit_post(request, post_id):
             messages.error(request, 'Failed to update post. Please ensure the form is valid.')
     else:
         form = BlogForm(instance=post)
-        messages.info(request, f'You are editing {post.name}')
+        messages.info(request, f'You are editing {post.title}')
 
     template = 'blog/edit_post.html'
     context = {
