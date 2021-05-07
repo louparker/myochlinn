@@ -1,7 +1,6 @@
 from django import forms
 from .models import Post, Comment
 from .widgets import CustomClearableFileInput
-from crispy_forms.helper import FormHelper
 
 
 class BlogForm(forms.ModelForm):
@@ -29,8 +28,6 @@ class BlogForm(forms.ModelForm):
             'image': 'Image',
             'source_link': 'Article Source Link',
         }
-        self.helper = FormHelper()
-        self.helper.form_show_labels = True
 
         self.fields['title'].widget.attrs['autofocus'] = True
         for field in self.fields:
@@ -40,7 +37,6 @@ class BlogForm(forms.ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'input-shadow'
-            self.fields[field].label = False
 
 
 class CommentForm(forms.ModelForm):
