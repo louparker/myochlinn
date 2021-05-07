@@ -133,7 +133,7 @@
                                     <input type="submit" class="btn btn-secondary rounded text-uppercase mt-3" value="Add to Bag">
 
                                     <a href="{% url 'products' %}" class="btn rounded-0 btn-lg my-4">
-                                        <p class="text-uppercase text-center">Continue Shopping</p>
+                                        <button class=" btn btn-dark text-uppercase rounded text-center">Continue Shopping</button>
                                     </a>
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -153,7 +153,7 @@
     <div class="row">
         <div class=" col reviews-wrapper">
             {% for review in product.reviews.all %}
-                <div class="my-5">
+                <div class="my-5 comment-field rounded">
                     <p>
                         <strong>Date: </strong>{{ review.date_added|date:"Y-m-d" }},
                         <strong>Stars: </strong>{{ review.stars }}
@@ -163,7 +163,7 @@
                 </div>
                 <hr class="my-5 mx-auto">
             {% empty %}
-                <div class="my-3">
+                <div class="my-3 comment-field rounded">
                     No reviews yet...
                 </div>
             {% endfor %}
@@ -198,7 +198,10 @@
                     <button class="btn btn-secondary">Submit</button>
                 </form>
             {% else %}
-                <p>Please sign in to add review!</p>
+                <p>Please
+                     <a href="{% url 'account_login' %}" class="link text-decoration-underline">sign in</a>
+                     to add review!
+                </p>
             {% endif %}
         </div>
     </div>

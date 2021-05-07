@@ -6,7 +6,7 @@
 <div class="container h-100">
 
     <div class="row">
-        <h1>{{ post.title }}</h1>
+        
         <div class="col-12 col-md-6">
             <div class="product-image-container my-5">
                 {% if post.image %}
@@ -21,6 +21,7 @@
             </div>
         </div>
         <div class="col-12 col-md-6">
+            <h1 class="text-center my-5">{{ post.title }}</h1>
             <h3><strong>{{ post.preview }}</strong></h3>
             <p>{{ post.section_one }}</p>
             <p>{{ post.section_two }}</p>
@@ -32,22 +33,23 @@
     <hr class="my-5 mx-auto">
     <div class="row">
         <div class="col">
-            <h3>Comments</h3>
+            <h3 class="text-center my-5">Comments</h3>
+            <div class="comment-field rounded">
+                {% for comment in post.comments.all %}
+                    <h5>
+                        <strong>{{ comment.name }}</strong>
+                        <br>
+                        <p class="fs-6">{{ comment.date_added }}</p>
+                    </h5>
+                    <p>{{ comment.body }}</p>
+                {% empty %}
+                    <p>No Comments Yet</p>
+                {% endfor %}
+            </div>
 
-            {% for comment in post.comments.all %}
-                <h5>
-                    <strong>{{ comment.name }}</strong>
-                    <br>
-                    <p class="fs-6">{{ comment.date_added }}</p>
-                </h5>
-                <p>{{ comment.body }}</p>
-            {% empty %}
-                <p>No Comments Yet</p>
-            {% endfor %}
+            <hr class="my-5 mx-auto">
 
-            <hr class="my-2 mx-auto">
-
-            <h3>Add Comment</h3>
+            <h3 class="text-center">Add Comment</h3>
 
             <form method="POST" action=".">
                 {% csrf_token %}
