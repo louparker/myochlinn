@@ -13,7 +13,7 @@
     <hr class="mb-5 mx-auto">
 
     <div class="row">
-        <div class="col">
+        <div class="col mb-5">
             {% if bag_items %}
                 <div class="table-responsive rounded align-middle text-center">
                     <table class="table table-sm table-borderless align-middle">
@@ -76,13 +76,11 @@
                                         </div>
                                     </form>
                                     <div class="item-links-wrapper d-flex justify-content-evenly my-2">
-                                    <a class="update-link">
-                           
-                                        <p>UPDATE</p>
+                                    <a class="update-link link">
+                                        <i class="bi bi-arrow-repeat"></i>
                                     </a>
-                                    <a class="remove-item float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}">
+                                    <a class="remove-item float-right link" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}">
                                         <i class="bi bi-trash"></i>
-                                        <p>DELETE</p>
                                     </a>
                                     </div>
                                 </td>
@@ -100,7 +98,7 @@
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn  rounded btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-dark rounded btn-lg">
                                     <span class="text-uppercase">Continue Shopping</span>
                                 </a>
                                 <a href="{% url 'checkout' %}" class="btn btn-secondary rounded btn-lg">
@@ -136,6 +134,7 @@
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
+        console.log(form)
     })
 
     // Remove item and reload on click

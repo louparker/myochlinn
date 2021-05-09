@@ -49,6 +49,11 @@ img {
     padding: 0;
 }
 
+nav {
+    font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
+    font-size: 1.5rem;
+}
+
 .nav__wrapper {
     background-color: #d6d7d8;
 }
@@ -70,7 +75,7 @@ img {
 }
 
 .logo {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: "Stanley";
 }
 
@@ -202,109 +207,32 @@ input[name='q']::placeholder {
 .hero-text1 {
     font-size: 5rem;
     margin-top: 220px;
+    margin-left: 20px;
     font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
 }
 
 .hero-text2 {
     font-size: 5rem;
     margin-top: 120px;
+    margin-left: 20px;
+    line-height: 1.1;
     font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
 }
 
 .look-header {
-    font-size: 2rem;
-}
-
-.shop-now-container {
-    max-width: 500px;
-    height: auto;
-    max-width: 100%;
-}
-
-.shop-now__img {
-    max-width: 100%;
-}
-
-.recycle-section__container {
-    max-width: 100%;
-}
-
-.recycle-header__section {
-    max-width: 500px;
-}
-
-.recycle1__header {
     font-size: 3rem;
-    margin-right: 50px
+    font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
 }
 
-.recycle2__header {
-    font-size: 2.7rem;
-    margin-right: 20px
-}
-
-.recycle3__header {
-    font-size: 2.4rem;
-    margin-left: 50px
-}
-
-.about-recycle__section {
-    font-size: .85rem;
-}
-
-.learn-more__link {
-    display: flex;
-    justify-content: center;
-    font-size: .85rem;
-}
-
-.recycle-items__container {
-    max-width: 500px;
-}
-
-.spring__container {
-    max-width: 500px;
-}
-
-.spring__header {
-    font-size: 2rem;
-}
-
-.spring__img {
-    max-width: 500px;
-    width: 50%;
-}
-
-.best-sellers__header {
-    font-size: 2rem;
-}
-
-.value__text {
-    font-size: .8rem;
-}
-
-.bi-globe {
-    font-size: 3rem;
-}
-
-.bi-arrow-repeat {
-    font-size: 3rem;
-}
-
-.bi-emoji-sunglasses {
-    font-size: 3rem;
-}
-
-.values__footer {
-    max-width: 992px;
-    background-color: #131212;
-    color: #fff;
+.sustainable-header {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 footer {
     background-color: #f7f7f7;
     width: 100%;
     padding: 1.3rem;
+    font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
 }
 
 .footer-link-wrapper {
@@ -313,7 +241,8 @@ footer {
 }
 
 .footer-link-text {
-    font-size: 2rem;
+    font-size: 3rem;
+    line-height: 1.1;
 }
 
 .footer-logo {
@@ -461,11 +390,7 @@ footer {
     max-width: 992px;
 }
 
-.bespoke-section {
-    
-}
-
-.bespoke-header-img {
+.sustainable-header-img {
     background-image: url(https://res.cloudinary.com/ivanprojects/image/upload/v1619981676/bespoke_ybtln2.jpg);
     background-size: cover;
     background-position: center;
@@ -485,7 +410,8 @@ footer {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 1.1rem;
+    font-size: 2rem;
+    font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
 }
 
 /* contact templates */
@@ -493,6 +419,12 @@ footer {
 
 .contact-text {
     max-width: 70vw;
+}
+
+/* bag templates */
+/* bag page */
+.item-links-wrapper {
+    flex-direction: column;
 }
 
 /* media queries */
@@ -514,29 +446,31 @@ footer {
     .logo-and {
     font-size: 1.5rem;
     }
+
+    .item-links-wrapper {
+    flex-direction: row;
+    }
 }
 
 @media (min-width: 768px) {
-
+    
 }
 
 @media (min-width: 992px) {
-
+    
 }
 
 @media (min-width: 1200px) {
-
+    
 }
 
 @media (min-width: 1600px) {
-
+    
 }
 
 @media (min-width: 2000px) {
-
+    
 }
-
-
 
 /* transitions */
 
@@ -585,3 +519,4 @@ footer {
 .sister-text-detail {
 
 }
+
