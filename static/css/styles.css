@@ -461,7 +461,14 @@ footer {
 }
 
 @media (min-width: 768px) {
-    
+    .hero-section {
+        margin: auto 1rem auto 1rem;
+    }
+
+    .hero-section-2 {
+        margin: auto 1rem auto 1rem;
+    }
+}
 }
 
 @media (min-width: 992px) {
