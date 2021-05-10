@@ -31,30 +31,9 @@
                                 <i class="bi bi-pencil-square fs-3"></i>
                             </a>
 
-                            <!-- delete product modal button -->
-                                <!-- Button trigger modal -->
-                                <a type="button" class="delete__icon link" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                            <a href="{% url 'delete_product' product.id %}" class="link">
                                     <i class="bi bi-trash fs-3"></i>
-                                </a>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModal" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Are you sure you want to delete {{ product.name}}?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <a href="{% url 'delete_product' product.id %}" type="button" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            </a>
                         {% endif %}
 
                         <hr class="my-5 mx-auto">

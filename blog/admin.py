@@ -7,9 +7,7 @@ class BlogAdmin(admin.ModelAdmin):
         'title',
         'author',
         'preview',
-        'section_one',
-        'section_two',
-        'section_three',
+        'text_content',
         'image',
         'source_link',
     )

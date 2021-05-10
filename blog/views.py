@@ -24,6 +24,7 @@ def all_posts(request):
 
     context = {
         'posts': page,
+        'on_blog_pages': True,  # to not show bag contents
     }
 
     return render(request, 'blog/blog.html', context)
@@ -75,6 +76,7 @@ def add_post(request):
     template = 'blog/add_post.html'
     context = {
         'form': form,
+        'on_blog_pages': True  # to not show bag contents
     }
 
     return render(request, template, context)
