@@ -128,17 +128,19 @@
                     <div class="nav-item">
                         <a href="{% url 'view_bag' %}" class="{% if grand_total %} font-weight-bold{% else %}text-secondary{% endif %} nav-link link">
                             <div class="text-center">
-                                <div><i class="bi bi-basket"></i></div>
-                                <p class="my-0 fs-6">
+                                <div class="">
+                                    <i class="bi bi-basket3 position-relative">
                                     {% if bag_items %}
-                                        {{ product_count }}
+                                        <span class="badge">
+                                            {{ product_count }}
+                                        </span>    
                                     {% else %}
-                                        
-                                    {% endif %}
-                                </p>
+
+                                    {% endif %}   
+                                    </i>
+                                </div>  
                             </div>
                         </a>
-                        
                     </div>
                 </div>
             </div>
