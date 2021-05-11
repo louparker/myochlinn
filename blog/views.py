@@ -66,7 +66,7 @@ def add_post(request):
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save()
-            messages.success(request, 'Successfully added post!')
+            messages.info(request, 'Successfully added post!')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
             messages.error(request, 'Failed to add post. Please ensure the form is valid.')
@@ -86,15 +86,15 @@ def add_post(request):
 def edit_post(request, post_id):
     """ Edit a post in the store """
     if not request.user.is_superuser:
-                messages.error(request, 'Sorry, only management can do that.')
-                return redirect(reverse('home'))
+        messages.error(request, 'Sorry, only management can do that.')
+        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=post_id)
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
-            messages.success(request, 'Successfully updated post!')
+            messages.info(request, 'Successfully updated post!')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
             messages.error(request, 'Failed to update post. Please ensure the form is valid.')
@@ -120,5 +120,5 @@ def delete_post(request, post_id):
 
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
-    messages.success(request, 'Post deleted!')
+    messages.info(request, 'Post deleted!')
     return redirect(reverse('posts'))

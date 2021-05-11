@@ -36,6 +36,10 @@ body {
     text-decoration: none;
 }
 
+.btn-text-white {
+    color: #ffffff;
+}
+
 .price-font  {
     font-family: 'Emberly Medium', 'Lucida Sans' !important;
     font-weight: 700 !important;
@@ -320,10 +324,6 @@ footer {
 	color: #fff;
     background-color: #222;
     border-color: #222;
-}
-
-.allauth-form-inner-content a {
-	color: #000000; /* text-info */
 }
 
 /* checkout templates */
