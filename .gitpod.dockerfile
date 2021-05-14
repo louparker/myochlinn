@@ -12,6 +12,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 20691eec35216c6
     apt-get -y install mongodb-org-shell -y  && \
     apt-get -y install links  && \
     apt-get install -y mysql-server && \
+    && apt-get install -y graphviz && \
     apt-get clean && rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* && \
     mkdir /var/run/mysqld && \
     chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring /var/lib/mysql-upgrade /home/gitpod/.cache/heroku/ && \
