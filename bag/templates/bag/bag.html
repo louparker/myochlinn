@@ -14,6 +14,7 @@
 
     <div class="row">
         <div class="col mb-5">
+            <!-- if loop to get all users bbag items and display them -->
             {% if bag_items %}
                 <div class="d-block d-md-none">
                     <div class="row">
@@ -200,6 +201,7 @@
                     </table>
                 </div>
             {% else %}
+            <!-- if there are no items in the bag, show this message instead and give a link to continue shopping -->
                 <p class="mb-4 text-center">Nothing in your bag at the moment!</p>
                 <div class="d-flex justify-content-center">
                 <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
@@ -218,14 +220,14 @@
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
-    // Update quantity on click
+    // Updates product quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).parent().prev('.update-form');
         form.submit();
         console.log(form)
     })
 
-    // Remove item and reload on click
+    // Removes product and reloads on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];

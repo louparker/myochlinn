@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
     'home',
     'products',
     'bag',
@@ -61,6 +60,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'storages',
     'tinymce',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -233,17 +233,10 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': [
-            'profile',
-            'email',
-        ],
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        }
-    }
-}
-
 TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
 TINYMCE_COMPRESSOR = False
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
