@@ -7,20 +7,26 @@
 
 @font-face {
   font-family: "Emberly Bold";
-  src: url("fonts/Emberly-Bold.ttf"),
-       url("fonts/Emberly-Bold.otf");
+  src: url("fonts/Emberly-Bold.ttf") format('truetype'),
+       url("fonts/Emberly-Bold.otf") format('opentype'),
+       url("fonts/Emberly-Bold.woff") format('woff'),
+       url("fonts/Emberly-Bold.woff2") format('woff2');
 }
 
 @font-face {
   font-family: "Emberly Narrow";
-  src: url("fonts/Emberly-Narrow.ttf"),
-       url("fonts/Emberly-Narrow.otf");
+  src: url("fonts/Emberly-Narrow.ttf") format('truetype'),
+       url("fonts/Emberly-Narrow.otf") format('opentype'),
+       url("fonts/Emberly-Narrow.woff") format('woff'),
+       url("fonts/Emberly-Narrow.woff2") format('woff2');
 }
 
 @font-face {
   font-family: "Emberley Medium";
-  src: url("fonts/Emberly-Medium.ttf"),
-        url("fonts/Emberly-Medium.otf");
+  src: url("fonts/Emberly-Medium.ttf") format('truetype'),
+       url("fonts/Emberly-Medium.otf") format('opentype'),
+       url("fonts/Emberly-Medium.woff") format('woff'),
+       url("fonts/Emberly-Medium.woff2") format('woff2');
 }
 
 body {
