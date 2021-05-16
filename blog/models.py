@@ -1,11 +1,11 @@
 from django.db import models
-from django.utils.safestring import mark_safe
+from tinymce import models as tinymce_models
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=50, blank=True, null=True)
     preview = models.TextField()
-    text_content = models.TextField(blank=False, null=False)
+    text_content = tinymce_models.HTMLField(blank=False, null=False)
     image = models.ImageField(blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
     source_link = models.CharField(max_length=254, blank=True, null=True)

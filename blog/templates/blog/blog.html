@@ -30,8 +30,8 @@
                         </a>
                         {% endif %}
                         <div class="card-body">
-                            <p class="card-text fs-1 text-center">{{ post.title }}</p>
-                            <p class="card-text fs-4 text-center">{{ post.preview}}</p>
+                            <p class="card-text fs-1 text-center">{{ post.title | safe }}</p>
+                            <p class="card-text fs-4 text-center">{{ post.preview | safe}}</p>
                             {% if request.user.is_superuser %}
                                 <!-- edit post button -->
                                 <a href="{% url 'edit_post' post.id %}" class="link">

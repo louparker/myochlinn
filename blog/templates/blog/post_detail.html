@@ -21,9 +21,9 @@
             </div>
         </div>
         <div class="col-12 col-md-6">
-            <h1 class="text-center my-5">{{ post.title }}</h1>
-            <h3><strong>{{ post.preview }}</strong></h3>
-            <p>{{ post.text_content }}</p>
+            <h1 class="text-center my-5">{{ post.title | safe }}</h1>
+            <h3><strong>{{ post.preview | safe }}</strong></h3>
+            <p>{{ post.text_content | safe }}</p>
             <small>Words by: {{ post.author }}.</small>
             <small>Posted on: {{ post.date_added }}.</small>
         </div>
@@ -39,7 +39,7 @@
                         <br>
                         <p class="fs-6">{{ comment.date_added }}</p>
                     </h5>
-                    <p>{{ comment.body }}</p>
+                    <p>{{ comment.body | safe }}</p>
                 {% empty %}
                     <p>No Comments Yet</p>
                 {% endfor %}
