@@ -14,9 +14,8 @@ import os
 import dj_database_url
 from pathlib import Path
 
-if os.path.exists('env.py'): 
+if os.path.exists('env.py'):
     import env
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -88,7 +87,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -113,7 +112,6 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-
 
 
 ACCOUNT_AUTHORISATION_METHOD = 'username_email'
@@ -215,7 +213,7 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-#stripe
+# stripe
 STRIPE_CURRENCY = 'sek'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
@@ -237,6 +235,6 @@ TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
 TINYMCE_COMPRESSOR = False
 
 GRAPH_MODELS = {
-  'all_applications': True,
-  'group_models': True,
+    'all_applications': True,
+    'group_models': True,
 }

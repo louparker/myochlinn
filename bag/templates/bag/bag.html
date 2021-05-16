@@ -14,7 +14,7 @@
 
     <div class="row">
         <div class="col mb-5">
-            <!-- if loop to get all users bbag items and display them -->
+            <!-- if loop to get all users bag items and display them -->
             {% if bag_items %}
                 <div class="d-block d-md-none">
                     <div class="row">
@@ -66,7 +66,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <button class="decrement-qty btn btn-sm rounded-0" 
-                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                    data-item_id="{{ item.item_id }}" id="mob-decrement-qty_{{ item.item_id }}">
                                                     <span>
                                                         <i class="bi bi-dash"></i>
                                                     </span>
@@ -78,7 +78,7 @@
                                                 id="id_qty_{{ item.item_id }}">
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn btn-sm rounded-0"
-                                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                    data-item_id="{{ item.item_id }}" id="mob-increment-qty_{{ item.item_id }}">
                                                     <span>
                                                         <i class="bi bi-plus"></i>
                                                     </span>
@@ -224,8 +224,8 @@
     $('.update-link').click(function(e) {
         var form = $(this).parent().prev('.update-form');
         form.submit();
-        console.log(form)
-    })
+        console.log(form);
+    });
 
     // Removes product and reloads on click
     $('.remove-item').click(function(e) {
@@ -239,6 +239,6 @@
          .done(function() {
              location.reload();
          });
-    })
+    });
 </script>
 {% endblock %}
