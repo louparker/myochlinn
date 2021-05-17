@@ -22,7 +22,7 @@
 }
 
 @font-face {
-  font-family: "Emberley Medium";
+  font-family: "Emberly Medium";
   src: url("fonts/Emberly-Medium.ttf") format('truetype'),
        url("fonts/Emberly-Medium.otf") format('opentype'),
        url("fonts/Emberly-Medium.woff") format('woff'),
@@ -116,6 +116,23 @@ nav {
     top: 12px;
     right: 2px;
     font-family: 'Emberly Medium', 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+.accordion-flush:focus {
+    outline:0 !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #000000;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border: none;
 }
 
 .bi-justify-right {

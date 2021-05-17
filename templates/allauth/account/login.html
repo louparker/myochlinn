@@ -8,14 +8,14 @@
 {% block inner_content %}
 
 <hr class="my-5 mx-auto">
-<h2 class="fs-2 mb-4 text-center">{% trans "Sign In" %}</h2>
+<h2 class="fs-2 mb-4 text-center">{% trans "Log In" %}</h2>
 <hr class="my-5 mx-auto">
 
 {% get_providers as socialaccount_providers %}
 
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a class="text-reset" href="{{ signup_url }}">sign up</a>
+of your existing third party accounts. Or, <a class="text-reset link" href="{{ signup_url }}">sign up</a>
 for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
@@ -32,7 +32,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 {% else %}
 <p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<a href="{{ signup_url }}" class="text-reset">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
 <form class="login my-5" method="POST" action="{% url 'account_login' %}">
@@ -41,8 +41,8 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="btn btn-secondary rounded mt-3" href="{% url 'home' %}">Home</a>
-  <button class="primaryAction btn btn-secondary rounded mt-3" type="submit">{% trans "Sign In" %}</button>
+  <a class="btn btn-secondary rounded mt-3" href="{% url 'home' %}">Cancel</a>
+  <button class="primaryAction btn btn-secondary rounded mt-3" type="submit">{% trans "Log In" %}</button>
   <p class="mt-2">
     <a class="button secondaryAction text-reset" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   </p>
