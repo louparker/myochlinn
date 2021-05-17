@@ -30,7 +30,7 @@
 }
 
 body {
-    font-family: 'Emberly Medium', 'Lucida Sans', 'Lucida Sans Regular';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
     background-color: #e7e7e7;
 }
 
@@ -489,6 +489,12 @@ footer {
 
 
 /* media queries */
+
+@media (min-width: 310px) { 
+    .nav-padding-fix {
+        padding: 0.5rem;
+    }
+}
 
 @media (min-width: 420px) { 
     .logo {
