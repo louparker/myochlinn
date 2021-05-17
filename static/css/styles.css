@@ -1,3 +1,5 @@
+/* -----------------------GENERAL STYLING----------------------- */
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
 
 @font-face {
@@ -34,16 +36,47 @@ body {
     background-color: #e7e7e7;
 }
 
-
-.link,
-.link:hover,
-.link:active,
-.link:link,
-.link:visited,
-.link:focus {
-    color: #000;
-    text-decoration: none;
+.container-fluid {
+    padding: 0;
 }
+
+img {
+    max-width: 100%;
+}
+
+/* ---------------------------------FOOTER---------------------------------- */
+
+footer {
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 1.3rem;
+    font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+.footer-link-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-link-text {
+    font-size: 2.3rem;
+    line-height: 1.1;
+}
+
+.footer-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.footer-socials {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+/* -----------------------NAVIGATION----------------------- */
 
 .mm-menu {
     --mm-color-text: #ffffff;
@@ -54,23 +87,6 @@ body {
 .mburger {
     --mb-button-size: 45px;
     --mb-bar-spacing: 7px;
-}
-
-.btn-text-white {
-    color: #ffffff;
-}
-
-.price-font  {
-    font-family: 'Emberly Medium', 'Lucida Sans' !important;
-    font-weight: 700 !important;
-}
-
-img {
-    max-width: 100%;
-}
-
-.container-fluid {
-    padding: 0;
 }
 
 nav {
@@ -115,32 +131,7 @@ nav {
     position: absolute;
     top: 12px;
     right: 2px;
-    font-family: 'Emberly Medium', 'Lucida Sans', 'Lucida Sans Regular';
-}
-
-.accordion-flush:focus {
-    outline:0 !important;
-}
-
-.accordion-button:focus {
-    box-shadow: none;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: transparent;
-    color: #000000;
-}
-
-.accordion-item:first-of-type .accordion-button {
-    border: none;
-}
-
-.bi-justify-right {
-    font-size: 2rem;
-}
-
-.profile-icon {
-    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
 }
 
 .logo {
@@ -148,12 +139,38 @@ nav {
     font-family: "Stanley";
 }
 
-.blog-title-logo {
-    font-size: 3rem;
-}
-
 .logo-font {
     font-family: "Stanley";
+}
+
+/* search placeholder */
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* -----------------------GENERAL ELEMENT CLASSES----------------------- */
+
+.link,
+.link:hover,
+.link:active,
+.link:link,
+.link:visited,
+.link:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.btn-text-white {
+    color: #ffffff;
+}
+
+.price-font  {
+    font-family: 'Lucida Sans' !important;
+    font-weight: 700 !important;
+}
+
+.bi-justify-right {
+    font-size: 2rem;
 }
 
 hr {
@@ -168,12 +185,16 @@ hr {
     color: #faf0ca;
 }
 
+.bi-heart-fill {
+    color: #d03623;
+}
+
 .update-link,
 .remove-item {
     cursor: pointer;
 }
 
-/* Toasts */
+/* -----------------------TOASTS/MESSAGES----------------------- */
 
 .message-container {
     position: fixed;
@@ -194,63 +215,13 @@ hr {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
-
-/* colors taken from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* search placeholder */
-input[name='q']::placeholder {
-    color: #aab7c4;
-}
-
-/* HOME PAGE */
+/* -----------------------HOME PAGE----------------------- */
 
 .offers {
     background-color: #131212;
@@ -297,45 +268,137 @@ input[name='q']::placeholder {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-footer {
-    background-color: #f7f7f7;
-    width: 100%;
-    padding: 1.3rem;
+.sustainable-header-img {
+    background-image: url(https://res.cloudinary.com/ivanprojects/image/upload/v1619981676/bespoke_ybtln2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    color: #fff;
+}
+
+.category-img {
+    max-height: 600px;
+    position: relative;
+}
+
+.category-img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
     font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
 }
 
-.footer-link-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+/* -----------------------CHECKOUT TEMPLATES----------------------- */
+/* checkout success back to button arrow icon */
 
-.footer-link-text {
-    font-size: 2.3rem;
-    line-height: 1.1;
-}
-
-.footer-logo {
+.bi-caret-left-fill {
     color: #fff;
+}
+
+.thanks-header {
+    font-size: 4rem;
+}
+
+/* -----------------------BLOG TEMPLATES----------------------- */
+
+.blog-link:hover {
+    text-decoration: underline;
+}
+
+.blog-title-logo {
+    font-size: 3rem;
+}
+
+/* -----------------------PROFILE TEMPLATE----------------------- */
+
+.profile-icon {
     font-size: 1.5rem;
-    margin-bottom: .5rem;
 }
 
-.footer-socials {
-    color: #fff;
-    font-size: 1.5rem;
+/* ----------------------CONTACT TEMPLATES---------------------- */
+/* contact page */
+
+.contact-text {
+    max-width: 70vw;
 }
 
-.copyright__text {
-    font-size: .8rem;
-    color: #fff;
+/* ----------------------PRODUCTS TEMPLATES---------------------- */
+/* products page */
+.delete__icon {
+    cursor: pointer;
 }
 
-.bi-heart-fill {
-    color: #d03623;
+/* product detail page */
+.comment-field {
+    background-color: #b5b5b5;
+    padding: 1rem;
 }
 
-/* Allauth form formatting */
+.product-info-wrapper {
+    margin-top: 2.5rem;
+}
+
+.accordion-flush:focus {
+    outline:0 !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #000000;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border: none;
+}
+
+/* product form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-radius: 0;
+}
+
+/* ----------------------ABOUT US PAGE---------------------- */
+
+.sister-main-text {
+    width: 60vw;
+    max-width: 768px;
+    margin: 0 auto 50px auto;
+}
+
+.sister-img {
+    margin: 0 auto;
+}
+
+/* ----------------------Allauth form formatting---------------------- */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -382,113 +445,7 @@ footer {
     background-color: #222;
 }
 
-/* checkout templates */
-/* checkout success back to button arrow icon */
-
-.bi-caret-left-fill {
-    color: #fff;
-}
-
-.thanks-header {
-    font-size: 4rem;
-}
-
-.blog-link:hover {
-    text-decoration: underline;
-}
-
-/* product form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-radius: 0;
-}
-
-/* collapse product detail */
-
-.custom-collapse-content,
-#collapseExample.in,
-#collapseExample.collapsing {
-  width: 100%;
-  display: inline-block;
-}
-
-.spring-img-1 {
-    max-width: 670px;
-    max-height: 700px;
-}
-
-.spring-img-2 {
-    max-width: 340px;
-    max-height: 370px;
-    
-}
-
-.spring-img-3 {
-    max-width: 340px;
-    max-height: 370px;
-}
-
-.spring-img-section {
-    max-width: 992px;
-}
-
-.sustainable-header-img {
-    background-image: url(https://res.cloudinary.com/ivanprojects/image/upload/v1619981676/bespoke_ybtln2.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    color: #fff;
-}
-
-.category-img {
-    max-height: 600px;
-    position: relative;
-}
-
-.category-img-text {
-    position: absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2rem;
-    font-family: 'Emberly Narrow', 'Lucida Sans', 'Lucida Sans Regular';
-}
-
-/* contact templates */
-/* contact page */
-
-.contact-text {
-    max-width: 70vw;
-}
-
-/* bag templates */
-/* bag page */
-
-
-/* media queries */
+/* ----------------------media queries---------------------- */
 
 @media (min-width: 310px) { 
     .nav-padding-fix {
@@ -529,23 +486,8 @@ footer {
     }
 }
 
-@media (min-width: 992px) {
-    
-}
 
-@media (min-width: 1200px) {
-    
-}
-
-@media (min-width: 1600px) {
-    
-}
-
-@media (min-width: 2000px) {
-    
-}
-
-/* transitions */
+/* ----------------------TRANSITIONS---------------------- */
 
 /* Bounce In */
 .hvr-bounce-in {
@@ -563,33 +505,3 @@ footer {
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
-
-/* products templates */
-/* products page */
-.delete__icon {
-    cursor: pointer;
-}
-
-/* product detail page */
-.comment-field {
-    background-color: #b5b5b5;
-    padding: 1rem;
-}
-
-.product-info-wrapper {
-    margin-top: 2.5rem;
-}
-
-
-/* about us page */
-
-.sister-main-text {
-    width: 60vw;
-    max-width: 768px;
-    margin: 0 auto 50px auto;
-}
-
-.sister-img {
-    margin: 0 auto;
-}
-

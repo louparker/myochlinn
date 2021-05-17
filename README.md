@@ -1,10 +1,10 @@
 # My och Linn
 
-![screenshot of the site on different devices](https://res.cloudinary.com/ivanprojects/image/upload/v1614918865/send-it-images/Screenshot_2021-03-05_at_05.34.00_iihu26.png)
+![screenshot of the site on different devices](https://res.cloudinary.com/ivanprojects/image/upload/v1621281558/ms4/Screenshot_2021-05-17_at_21.54.01_jvdig0.png)
 
 # Project Description
 
-The “Send It" blog is a site where a collective posts a curated selection of news on music and culture.
+“My & Linn” is an online jewelry store which sells handcrafted & unique pieces, specialising in Silver. The pieces are made in Stockholm, Sweden by a family run business led by two sisters who are the head silversmiths My & Linn Johansson. 
 
 Below is a live link to the site which is hosted on Heroku.
 [HERE](https://myochlinn.herokuapp.com/)
@@ -15,10 +15,8 @@ Below is a live link to the site which is hosted on Heroku.
 2. [Target Audience](#target-audience)
 3. [UX Design](#ux-design)
     - [Strategy](#strategy)
-    - [Owner Stories](#owner-stories)
     - [User Stories](#user-stories)
     - [Scope](#scope)
-    - [Structure](#structure)
     - [Skeleton](#skeleton)
     - [Wire frames](#wire-frames)
     - [Surface](#surface)
@@ -26,11 +24,9 @@ Below is a live link to the site which is hosted on Heroku.
     - [Typography](#typography)
     - [Color](#color)
     - [Imagery](#imagery)
-    - [Framework](#framework)
-    - [Design Wrap-Up](#design-wrap-up)
-5. [Existing Features](#existing-features)
-6. [Features Left To Implement](#features-left-to-implement)
-7. [Database](#database)
+5. [Information Architecture](#information-architecture)
+6. [Existing Features](#existing-features)
+7. [Features Left To Implement](#features-left-to-implement)
 8. [Technologies Used](#technologies-used)
 9. [Testing](#testing)
 10. [Deployment](#deployment)
@@ -40,20 +36,16 @@ Below is a live link to the site which is hosted on Heroku.
 
 ## Project Goals
 
-The aims of this web app are as follows:
--   Showcase skills with Python & MongoDB.
--   Add a more potential client relevant project to my portfolio.
--   Give client collective a space to share content.
--   Give users unique content content to read about.
+The goals of this project are to provide a place for customers to view, buy, compare the pieces available to purchase. It is also meant to be a HUB for clients to read blog posts & leave reviews on products amongst other things.
 
 -----
 
 ## Target Audience
 
--   Client collective interested in sharing relevant content.
--   Other potential freelance clients.
--   People interested in music & culture.
--   Peers interested in networking
+-   Families
+-   Women of all ages.
+-   Men 20yrs and above.
+-   Influencers & celebrities.
 
 -----
 
@@ -61,308 +53,491 @@ The aims of this web app are as follows:
 
 ### Strategy
 
-This site was created for a client who is a lover of music and culture. The client wanted to have a space where they and some chosen associates could write and enjoy content about the music and culture that they love. The client thought there was a space for quality, hand-picked content away from algorithms and computed playlists. Hence the idea of a music blog came to be. The focus of the site is on having a functional space where the client collective and other users can reliably and consistently create new blog posts, edit said blog posts, read other users blog posts and delete their own posts. Based on this and the target audience, the following owner and user stories were compiled.
+This site is at the request of client “My & Linn” who are a family owned jewelers looking to increase their online presence, make it easier for their customers to see and buy their products and increase business in general.
 
-### Owner Stories
+The aim was to create a website that will offer a very similar but also unique experience when compared to competitors. Customers should feel like they are using a smooth, reliable and professional site while also benefiting from the boutique and more personal feeling of the company.
 
 
--   The site owner wants to showcase music & culture in an easy simple way.
--   The site owner wants site visitors to be able to post their choice of content on the site.
--   The site owner wants to be able to edit and delete posts.
--   The site owner wants users to be able to upload their own profile pictures.
 
 ### User Stories
 
--   The site user wants to be able to see that all parts of the site function well.
--   The site user wants to be able to read the latest on music & culture in a clear and concise format.
--   The site user wants the overall user experience to be smooth and modern.
--   The site user wants to be able to figure out the structure of the site quickly and easily.
--   The site user wants to be able to search for words to find posts.
--   The site user wants to be able to view the site on their mobile devices comfortably.
--   The site user wants to be able to easily post content.
--   The site user wants to be able to images to indicate who posted which content.
--   The site user wants to be able to learn more about the main collective in charge of the posts.
--   The site user wants to easily be able to contact the main collective in charge of the posts
+
+| User Story Number | As A/An      | I should be able to...                                                         | So that I can ...                                                                                                    |
+|-------------------|--------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| 1                 | Site Owner   | Add products                                                                   | Have new Items available for purchase on the site.                                                                   |
+| 2                 | Site Owner   | Delete products                                                                | Have correct available stock information on the site.                                                                |
+| 3                 | Site Owner   | Edit products                                                                  | Change & update relevant stock information.                                                                          |
+| 4                 | Site Owner   | Add, modify & delete blog posts                                                | Keep the blog section of the site fresh                                                                              |
+| 5                 | Site Owner   | View a blog on the site with relevant tips, advice and interesting content     | Add value to the website and brand as a whole                                                                        |
+| 6                 | Site Owner   | Understand the purpose of the site                                             | Decide whether I want to invest my time into it.                                                                     |
+| 7                 | Site Owner   | Site to be readable on all screen sizes.                                       | Shop on the site no matter which device I am using.                                                                  |
+| 8                 | Site Visitor | View all available products                                                    | See which potential products I can purchase                                                                          |
+| 9                 | Site Visitor | View a specific category of products                                           | Find a specific type of jewelry without having the inconvenience of seeing other categories I know I do not want     |
+| 10                | Site Visitor | See individual product details                                                 | Learn more about the specific product                                                                                |
+| 11                | Site Visitor | Easily see special offers/exclusive items                                      | Take advantage of temporary offers and products                                                                      |
+| 12                | Site Visitor | See total shopping bag information at any time                                 | Control how much I am spending                                                                                       |
+| 13                | Site Visitor | Search for product by words in name or description                             | Find a specific product                                                                                              |
+| 14                | Site Visitor | See on search results, what I searched for and number of results found         | Reference the specific word I searched for and see how many items are matching the search                            |
+| 15                | Site Visitor | View items in basket with short description of each                            | See which products I am thinking about purchasing and be reminded of why I want to purchase them                     |
+| 16                | Site Visitor | Delete or change quantity of items in basket                                   | Easily change my mind or add/remove quantities of the same product without having to go to the specific product page |
+| 17                | Site Visitor | Easily see and choose size/colour/quantity to purchase                         | Purchase with the specification I am comfortable with                                                                |
+| 18                | Site Visitor | View information on how to care for product on product page                    | Keep the product in good condition for a long time                                                                   |
+| 19                | Site Visitor | View a size guide for relevant products                                        | Feel sure about which size is best for me                                                                            |
+| 20                | Site Visitor | Learn more about the business & their values from the about page               | Feel more comfortable buying from the company                                                                        |
+| 21                | Site Visitor | Have easy access to a contact page                                             | Have an easy way to contact the company should I have any feedback or comments to make.                              |
+| 22                | Site Visitor | Easily find out delivery information                                           | Easily see how long it will take to receive my product                                                               |
+| 24                | Site Visitor | Find an FAQ section                                                            | Quickly find answers to common questions.                                                                            |
+| 25                | Customer     | Easily enter my payment details                                                | Have a smooth payment experience                                                                                     |
+| 26                | Customer     | See & feel that the payment process is secure                                  | Feel comfortable putting my payment information on the site                                                          |
+| 27                | Customer     | See an order confirmation after payment process is complete                    | Be sure that the order has gone through                                                                              |
+| 28                | Customer     | Receive email confirmation of order after website checkout process is complete | Have my own copy of an order confirmation and can relay back to this for relevant information.                       |
+| 29                | Customer     | Easily be able to register an account                                          | Take advantage of benefits of having an account on the site                                                          |
+| 30                | Customer     | Receive email confirmation of my account registration                          | Be sure that the registration process has gone through                                                               |
+| 31                | Customer     | Easy access to the log in/out functionality at all times                       | Easily log in or out of my account at any point when on the website.                                                 |
+| 32                | Customer     | Recover my password in case i forget                                           | Easily create now password and continue to shop on website                                                           |
 
 ### Scope
 
-Based on the user stories and project aims, the following features were considered & graded on difficulty and importance in order to decide which ones would be included in the app (5 being high & 1 being low):
+Based the user stories mentioned the features to be included in the project as well as their implementation schedule/priority are listed below. Also included are a list of features that will be left for later implementation.
 
-![screenshot of feature selection table](https://res.cloudinary.com/ivanprojects/image/upload/v1614899536/send-it-images/Screenshot_2021-03-05_at_00.11.45_gsoapx.png)
+#### Minimum Viable Product/Sprint 1:
+- View, Add, Edit and Delete Products
+- View products by category
+- See individual product details and easily see and choose size/colour/quantity to purchase
+- View items in basket with short description of each and delete or change quantity of items in basket
+- Search for product by words in name or description
+- See total quantity in bag at any time
+- On a safe a secure checkout page, be able to enter payment details, see a confirmation page after payment & receive a payment/order confirmation email
 
-The selected features include:
+#### Sprint 2:
+- See on search results, what I searched for and number of results found.
+- Easily be able to register an account
+- Receive email confirmation of my account registration
+- Easy access to the log in/out functionality at all times
+- Recover my password in case i forget
+- Add, modify & delete blog posts
+- View a blog on the site with relevant tips, advice and interesting content
 
--   Ability to make an account to post content.
--   Ability to create new posts & upload image for post.
--   All users posts available on home page.
--   Small profile picture on each posted showing which user created it.
--   Can edit or delete posts from home page (must be logged in as post creator).
--   An about page with information on collective and each member.
--   A contact page with a form for emailing collective.
--   A profile page showing users most recent posts.
--   Ability to update user profile picture.
--   A page where all logged in user's posts are collected.
--   Search functionality
+#### Sprint: 3:
+- Find an FAQ section
+- Easily find out delivery information
+- Have easy access to a contact page
+- Learn more about the business & their values from the about page
+- View information on how to care for product on product detail page
+- View a size guide for relevant products
 
-
-The project was then split into sprints to ensure an even workload spread over time.
--   Sprint 1 – Development environment and DB set up & Wire frames.
--   Sprint 2 – Python & Flask with HTML templates.
--   Sprint 3 – HTML & CSS fill in.
--   Sprint 4 - Testing & Debugging.
-
-### Structure
-
-I researched different blogs online & from experience, I had an idea of how I wanted the general structure of the site to look like.
--   Interaction design – The site should have a consistent flow of information, with the nav being at the top/off-canvas and footer at the bottom & main page specific content in the middle of each page. This flow if information is carried out through each page so the user will get used to important content being in one place.
--   Information Design – The content is structured so that content is always easily accessible and the user should not have to scroll or zoom unnecessarily.
+#### Sprint 4:
+- Testing & Debugging
 
 ### Skeleton
 
-Wire frames were created to ensure that initial design and structure ideas were actually functional & in keeping with UI & UX design principles.
+Wire frames were created to ensure that initial design and structure ideas actually worked and were realistic but also in keeping with UI & UX design principles.
 
 ### Wire frames
 
-#### HOME PAGE
+#### HOME/INDEX PAGE
 
-- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1614900718/send-it-images/Screenshot_2021-03-05_at_00.30.45_ecuv28.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281547/ms4/Screenshot_2021-05-17_at_21.37.29_qtynqt.png)
 
-This page keeps a very simple layout of a hero article followed by a grid of blog posts. Easy to understand and everything is accessible for the user. The header and footer section is kept the same throughout the site
 
 #### ABOUT PAGE
 
-- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1614902245/send-it-images/Screenshot_2021-03-05_at_00.33.51_p7ivvm.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281548/ms4/Screenshot_2021-05-17_at_21.37.36_wibmz2.png)
 
-This page contains a relevant main image of the followed by relevant text about the team. This information flow of image and text is used throughout the site and continues on this page with each team member having their image shown plus a small description of themselves.
 
 #### CONTACT PAGE
 
-- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1614902312/send-it-images/Screenshot_2021-03-05_at_00.34.05_bb36wk.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281548/ms4/Screenshot_2021-05-17_at_21.37.42_pwqdkh.png)
 
 #### LOGIN PAGE
 
-- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1614902408/send-it-images/Screenshot_2021-03-05_at_00.38.15_nidro5.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281547/ms4/Screenshot_2021-05-17_at_21.38.05_c2tnry.png)
 
-This page along with the sign up page has not much information so it was important to keep things simple and try to have the form in the middle of the viewport.
 
-#### SIGN UP PAGE
+#### REGISTER PAGE
 
-- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1614902313/send-it-images/Screenshot_2021-03-05_at_00.39.30_mzizp8.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281548/ms4/Screenshot_2021-05-17_at_21.38.21_bt92gv.png)
 
 #### PROFILE PAGE
 
-- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1614902313/send-it-images/Screenshot_2021-03-05_at_00.49.47_rpcijr.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281545/ms4/Screenshot_2021-05-17_at_21.39.14_nwu4ec.png)
 
-This page is roughly split in two down the middle with the left side being the user create and update picture side and the right being the users post previews. I wanted to separate the call to actions so there aren't too many buttons calling for attention.
 
-#### CREATE/EDIT POST PAGE
+#### PRODUCTS PAGE
 
-- [CREATE](https://res.cloudinary.com/ivanprojects/image/upload/v1614902313/send-it-images/Screenshot_2021-03-05_at_00.53.16_txzrii.png)
-- [EDIT](https://res.cloudinary.com/ivanprojects/image/upload/v1614902313/send-it-images/Screenshot_2021-03-05_at_00.53.05_jdovak.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281546/ms4/Screenshot_2021-05-17_at_21.38.29_pu6jfd.png)
 
-These pages are virtually identical with the main form content being in the middle of the page.
 
-#### YOUR POSTS PAGE
+#### PRODUCT DETAIL PAGE
 
-- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1614902313/send-it-images/Screenshot_2021-03-05_at_00.52.52_q94qsf.png)
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281546/ms4/Screenshot_2021-05-17_at_21.38.36_kxe5ux.png)
 
-This page is laid out similarly to the index page jus without the hero section and with all posts being created by the user. The similarity will allow for easy of use..
+
+#### CHECKOUT PAGE
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281546/ms4/Screenshot_2021-05-17_at_21.38.54_krulbq.png)
+
+
+#### BASKET PAGE
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281547/ms4/Screenshot_2021-05-17_at_21.38.44_kuotvh.png)
+
+
+#### FAQ/SUPPORT PAGE
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281547/ms4/Screenshot_2021-05-17_at_21.37.56_ikkn6r.png)
+
+
+#### ORDER CONFIRMATION PAGE
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281545/ms4/Screenshot_2021-05-17_at_21.39.07_fyjxfb.png)
+
+
+#### BLOG PAGE
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281545/ms4/Screenshot_2021-05-17_at_21.39.21_hlhsms.png)
+
+
+#### ADD/EDIT BLOG POST/PRODUCT PAGE
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281545/ms4/Screenshot_2021-05-17_at_21.39.37_yjy4am.png)
+
+
+#### BLOG DETAIL PAGE
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621281546/ms4/Screenshot_2021-05-17_at_21.38.36_kxe5ux.png)
+
 
 ### Surface
 
-The final look of the web app as a whole was decided at this point. Colours, typography, animations and other design elements were considered with all decisions based on the requirement that they reinforce the meaning or value of the content.
+The structure and general feel of the site has been decided & at this point the focus was on deciding on the right colour palette, typography, animations and other design elements. Ideas & concepts were formed in tandem meaning that all design elements were thought about when deciding each specific element. This aided in creating a total look/feeling of the site with everything working well together.
 
-At this point, I decided to confirm the final look of the site. This meant confirming the colour palette, Imagery choices, typography and other design elements. All decisions were made with the intention of enforcing more value to the structure and skeleton of the site.
+The design choices also needed to reinforce some meaning or value & just have real purpose, the meaning/value/purpose comes from the user stories and the site’s general aims, these were always referred to when contemplating the design elements. This process aids in the creation of a semantic, concise and easy to use site.
+
 
 ## Design Choices
 
 ### Typography
 
-There are two fonts being used for this site. Both are quite modern but they differ in styling, with the idea that one be used for headers & titles and the other be used for most other use cases. The fonts compliment each other quite well.
+Three main fonts were used for this site. The aims were to find a font to use as a logo for the brand and site & an interesting font that was flexible while still being unique.
 
-![screenshot of philosopher font](https://res.cloudinary.com/ivanprojects/image/upload/v1614904039/send-it-images/Screenshot_2021-03-05_at_01.26.47_mjrtpf.png)
+To these aims we decided on firstly “Stanley” which is a stencil display typeface by Jeremie Gauthier. It is rounded in part but also still rectangular which keeps good readability. It is also quite contemporary and unique. This was chosen to be the logo font.
 
-![screenshot of roboto slab](https://res.cloudinary.com/ivanprojects/image/upload/v1614904040/send-it-images/Screenshot_2021-03-05_at_01.27.02_vb5efk.png)
+The second font chosen is called Emberly. This was chosen to be the main go-to font family for the site. It is an incredibly flexible typeface with 54 styles spread over 3 widths. Throughout the site, the main font style used is “Emberly Narrow” for titles, headers and important text. The font family is generally quite traditional serif but the flexibility allows for a more unique flavour. The Narrow style used in the site headers and important text is quite condensed, the letters do not have much space in between them so it was at some points necessary to increase the letter spacing to increase readability.
 
-![screenshot of font pairing](https://res.cloudinary.com/ivanprojects/image/upload/v1614903514/send-it-images/Screenshot_2021-03-05_at_01.18.18_unldsf.png)
+The third font and main font for general text throughout the site is one of the default fonts 'Lucida Sans'. This font works well as a cleaner looking reading font that offers more clarity to users eyes. It works well with the two other fonts and forms an ideal trio of fonts that bring out the best of each others features.
+
+The @fontface CSS rule was used to include these custom fonts into the project after they were included in their own fonts folder within the static file directory.
+
+
+![screenshot of Stanley](https://res.cloudinary.com/ivanprojects/image/upload/v1621281789/ms4/Screenshot_2021-05-13_at_21.19.28_m1kevl.png)
+
+![screenshot of Emberly](https://res.cloudinary.com/ivanprojects/image/upload/v1621281634/ms4/Screenshot_2021-05-13_at_21.18.51_gdg6s5.png)
 
 ### Color
 
-I wanted the colors to be quite simple and understated but still provide enough contrast, vibrancy and really give a contemporary look. I chose black and white as accent, then chose a kind of off white and pastel/off black to be used as the main colors on the site. The secondary accent color was the lime green which would be used to really catch attention off the user.
+The colour palette for the site was carefully considered since competitor research showed a massive lean towards either white or beige for main colour choices. The need to be unique meant that we tried to choose colours that were different from the ones commonly found but also took into account the content that would be on the site, the products and the general layout of the site. With that in mind, a combination of whites into greys and eventually black was chosen.
 
-![screenshot of color palette](https://res.cloudinary.com/ivanprojects/image/upload/v1614911314/send-it-images/dto625em2gftggplvagl.png)
+One of the main reasons these colours were chosen was that the site content and more specifically the pictures were to be quite colourful and the thought was to give the pictures the right backdrop to stand out as much as possible. The pictures showcasing the products on sale was the priority. The colours also allow for good contrast throughout the site.
+
+
+![screenshot of color palette](https://res.cloudinary.com/ivanprojects/image/upload/v1621285641/ms4/Screenshot_2021-05-17_at_22.03.40_h1fulr.png)
 
 ### Imagery
 
-The imagery of the site very much relates to the content and the users. Each post contains an image relevant to what that post is about. The user can also upload a profile image which will be shown on their profile and also on the blog post content cards on the home and profile pages.
+The imagery was chosen with the aim of inspiring customers, standing out and giving the wow factor. As mentioned above the general site colour palette really allows the imagery to take center stage.
 
-### Framework
+## Information Architecture
 
-I decided to use the UI Kit framework to develop the front end of the site. This framework is class-based and seemed to be quite encapsulating in terms of having most components needed for what I wanted the site to do. The thing that convinced me to try this over Bootstrap or Bulma was that it had a very minimalistic but still timeless look to it which i thought really resonated with what I wanted to do with the site with regards to the design.
+In development i used the Django default SQLite database, with deployment to Heroku, a PostgresSQL database was used.
 
-I go into the issues I had with it within the testing document.
+### Data Models:
+The data is structured into 9 apps which house 8 data models.
 
-### Design Wrap-Up
+#### Home app
+Displays home page.
 
-At this point I was happy with the ideas for the design but due to the nature of the project, I proceeded with caution and decided to work with the back-end to make sure the functionality was working before really adding in the necessary HTML & CSS to get the site looking the wau i wanted it to. Up until that point, it was a "lite" version which acted as a testing ground for the design and functionality.
+#### About app
+Displays the about page
+
+#### Bag app
+Displays shopping bag page and controls the update and delete functionality of the shopping bag.
+
+#### Blog app
+Handles blog pages and CRUD operations.
+
+Post Model:
+Holds data for each blog post
+```
+class Post(models.Model):
+   title = models.CharField(max_length=255)
+   author = models.CharField(max_length=50, blank=True, null=True)
+   preview = models.TextField()
+   text_content = models.TextField(blank=False, null=False)
+   image = models.ImageField(blank=True, null=True)
+   date_added = models.DateTimeField(auto_now_add=True)
+   source_link = models.CharField(max_length=254, blank=True, null=True)
+```
+
+Comment Model:
+Holds data for blog post comments
+```
+class Comment(models.Model):
+   post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+   name = models.CharField(max_length=254)
+   email = models.EmailField()
+   body = models.TextField()
+   date_added = models.DateTimeField(auto_now_add=True)
+```
+
+#### Checkout app -
+Handles payment functionality and all checkout pages.
+
+```
+Order Model:
+Holds data of user who created the order, the items in the users shopping bag at the time of order, the order cost and unique stripe payment id.
+class Order(models.Model):
+   order_number = models.CharField(max_length=32, null=False, editable=False)
+   user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                    null=True, blank=True, related_name='orders')
+   full_name = models.CharField(max_length=50, null=False, blank=False)
+   email = models.EmailField(max_length=254, null=False, blank=False)
+   phone_number = models.CharField(max_length=20, null=False, blank=False)
+   country = CountryField(blank_label='Country *', null=False, blank=False)
+   postcode = models.CharField(max_length=20, null=True, blank=True)
+   town_or_city = models.CharField(max_length=40, null=False, blank=False)
+   street_address1 = models.CharField(max_length=80, null=False, blank=False)
+   street_address2 = models.CharField(max_length=80, null=True, blank=True)
+   county = models.CharField(max_length=80, null=True, blank=True)
+   date = models.DateTimeField(auto_now_add=True)
+   delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
+   order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+   grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+   original_bag = models.TextField(null=False, blank=False, default='')
+   stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+```
+
+```
+OrderLineItem Model:
+Holds data on which specific items the user ordered.
+order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+   product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+   product_size = models.CharField(max_length=2, null=True, blank=True) # XS, S, M, L, XL
+   quantity = models.IntegerField(null=False, blank=False, default=0)
+   lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+```
+
+#### Contact app -
+Displays the contact page
+
+
+#### Products app -
+Handles product pages and all product informations.
+
+```
+Category Model:
+Holds product category names
+   name = models.CharField(max_length=200)
+   friendly_name = models.CharField(max_length=200, null=True, blank=True)
+```
+
+```
+Product Model:
+Holds product details
+category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+   sku = models.CharField(max_length=200, null=True, blank=True)
+   name = models.CharField(max_length=200)
+   description = models.TextField()
+   has_sizes = models.BooleanField(default=False, null=True, blank=True)
+   price = models.DecimalField(max_digits=6, decimal_places=2)
+   image_url = models.URLField(max_length=1024, null=True, blank=True)
+   image = models.ImageField(null=True, blank=True)
+```
+
+```
+ProductReview Model:
+Holds product review content and user who left the review.
+class ProductReview(models.Model):
+   product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+   user = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
+   content = models.TextField(blank=True, null=True)
+   stars = models.IntegerField()
+   date_added = models.DateTimeField(auto_now_add=True)
+```
+
+#### Profiles app -
+Handles user profile pages and information.
+
+```
+UserProfile Model:
+Holds logged in users information.
+user = models.OneToOneField(User, on_delete=models.CASCADE)
+   default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+   default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
+   default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+   default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+   default_county = models.CharField(max_length=80, null=True, blank=True)
+   default_postcode = models.CharField(max_length=20, null=True, blank=True)
+   default_country = CountryField(blank_label='Country', null=True, blank=True)
+```
+
+#### Support app
+Displays the support page
+
+
+### Relationship
+
+Below is a diagram showcasing the relationships between the models.
+
+- [HERE](https://res.cloudinary.com/ivanprojects/image/upload/v1621286435/ms4/my_project_visualized_ekzd2k.png)
 
 -----
 
 ## Existing Features
 
-### Create an account
+### Off Canvas Nav Bar
 
-This is one of the main features of the site, to be able to register an account. This would be needed to create, edit and delete posts so it was one of the top priority features.
+This feature is normally reserved for mobile viewports on sites but since so many people browse the web on mobile devices these days, there is more of a trend of using the off canvas menu on desktop viewports. Hence it was chosen for this project as it also keeps the minimalistic feeling of the site and garners a feeling of similarity when looking at the site through a desktop viewport or a mobile viewport.
 
-### Create a post
+### Delivery Heading
 
-Another one of the top priority features, creating a post that will end up on the home page for other users and site visitors to read.
+This header can be found throughout the site and is a constant reminder of the great value when shopping through the site that deliveries are always free. Most competitors always charge and so it was important to really showcase this competitive advantage.
 
-### Uploading a picture when creating post
+### Shop By Product
 
-This feature is married to the create a post feature but was a bit more difficult to implement. After attempting to save the image uploads to the app file path, I decided it would be easier to use a cloud option, "Cloudinary". It took some time to figure out how to implement it well enough with python & flask but now it works great.
+This call to action on the home page invites the user to look through the available categories. 
 
-### All posts available on home page
+### Profile Icon on nav header
 
-This is another core feature of the site, having all the posts that have been created available to access on the home page.
+This icon changes depending on the signed in status of the user. If the user is signed in, the same icon is displayed but with a small tick to indicate the signed in status. The icon also takes the signed in user to their profile if they are signed in or to the sign in page if they are not.
 
-### Specific blog post creator image on blog post card
+### Search
 
-This was a not so easy but important feature to implement. Within each blog post card on the home or user profile page, there will be a small thumbnail image at the bottom of the card which will be the blog post creators profile image. It gives an easy method of identification for who wrote what post.
+Search functionality is an important factor of the site since the users will most likely be searching for the product names as these will be pushed in marketing by the site owners. These names are searchable in the actual product names or descriptions.
 
-### Can edit or delete posts from home page
+### Basket Icon with dynamically updating item quantity
 
-This feature allows a user who is logged in and has created posts, to see buttons to edit and delete on those specific posts that they have created. Its a simple easy, user friendly way of avoiding going to the all user posts section if a user just wanted to quickly edit something. The delete button also opens a modal to confirm deletion to prevent accidental post removal.
+The basket icon is displayed initially as an empty basket, once a user adds a product to their bag, the basket icon will then show the number of products in the bag at the moment. This number changes dynamically to always reflect the amount of items in the bag.
 
-### About page
+### Blog
 
-The about page was very easy to implement and does a good job of informing readers about the collective as a group and as individuals.
+The blog is an important part of the site to also give more value to users of the site and encourage them to continue to visit even if they dont buy anything.
 
-### Contact page
+### Blog comments
 
-This was another simple to implement but quite important page when it comes to providing value for the collective because if the contact page is easy to access and to use, site visitors are more likely to want to use it.
+Comments on blog post allow for interaction between site users and post authors, it is an easy way to increase the small boutique feeling of the site and company and make users feel good about the site owners being accessible.
 
-### Profile page
+### Add/delete/edit blog posts
 
-The profile page is another core feature of the site, each user has one and will find links there to create new posts, update their profile picture and see all posts they have created.
+The ability to add, delete and edit blog posts is important to allow for the continual addition and maintenance of the blog section of the site.
 
-### Update profile picture
+### Add/delete/edit products
 
-This was not a core feature but an easy to implement and a good to have one, initially there were issues due to problems with the cloudinary SDK but those were soon solved and now it works great.
+The ability of to add, delete and edit products is also of the utmost importance to allow the site owners to have flexibility in their offerings, adjust when necessary & keep things fresh on the site.
 
-### Search functionality
+### Organise products by category
 
-This was a great to have feature and not so difficult to implement either. Searching for specific words within the title or main post content will really make it easy for users and visitors to find the content they want.
+The site only has 4 category choices and so the option to filter by category is actually the main sorting/filtering choice. The total amount of products on the site is not high so users will use the shop by category or menu category choice as the main sorting function.
 
+### User Profiles
+
+User profiles allow the site users to save their personal information into a profile for the next time they purchase something on the site. It also allows them to find their previous order information for reference.
+
+### Special offers/exclusive category
+
+This category will be for recycled or one of a kind pieces produced by the site owners. It was important to be able to differentiate between continued products and one time only exclusive products. 
+
+### Care & Size guide
+
+The size and care guides found on the product detail page allows the site user to get relevant information at the right point in the purchase journey, when they are choosing a size and deciding whether to put the product in their bag. They get all the information they need to make an informed decision.
+
+### FAQ section
+
+The FAQ section gives users answers to common questions so that they dont have to go through the hassle of contacting the site owners and also encourages a feeling of clarity of information again allowing for informed decisions about products and the purchase journey.
+
+### Secure payments with stripe
+
+The payments on the site are handled securely by stripe. By using stripe, the site’s payment information is handled in a very secure way and one which they might already be familiar with since stripe is used for many ecommerce site’s payment solutions.
+
+### Email order confirmation
+
+The email confirmation gives site users another piece of information to refer to about their order/purchase. It is an important part of the ecommerce purchase journey and an expectation that users receive some sort of order confirmation to be able to be satisfied that the order they made has actually been received and confirmed.
+
+
+### Pagination
+
+Pagination on the products page allows for site users to jump through different pages instead of having to scroll through all the products which may not be easy/efficient for all users.
 
 -----
 
 ## Features Left To Implement
 
-### Use a rich text editor for post creation.
-This would have been great to have as at the moment the posts do not have any formatting so they are hard to read however it was quite hard to implement this feature in the time I had, but it will be something I will include in a future update for sure.
+### Personalised profile page with picture
+A user being able to further personalise their profile page with a profile picture is a feature that can give more of a “member” feeling however since the profile page would be for the time being the only place the picture would be displayed, it was decided that this feature could potentially be added at a later date
 
-### Admin super user permissions to edit and delete posts from all users.
-This feature was another good to have but was simply not high enough in priority. It would allow an admin account to edit and delete all posts, and also update the hero post.
+### Like/wishlist functionality
+This feature is often found on larger product base ecommerce sites, however the small boutique like concept of the store meant that the benefits of having this feature would not be as much. This is still a much wanted feature from the site owners but something that just did not have priority in time to build.
 
-### Ability to see if/when a post has been edited.
-This was a feature I tried to implement but complications and time issues meant I had to leave it for another time. It would allow site visitors to see the date when a user first posted a blog post and also the date they last edited it if any.
-
-### Comment on posts & edit comments.
-This feature was in my wishlist when initially speaking to the collective about the project as it would really enhance the "conversation" feeling of the site but time constraints and high difficulty for implementation meant I had to leave it for the time being.
-
-### Like posts & be able to access liked posts in profile.
-Another feature on the wishlist, this would not have been as hard to implement as comments and I had an idea of the logic for how it would work but as is becoming the pattern here, time did not allow for me to explore the possibility of adding this feature.
-
-### Related blog post links on blog post page.
-I liked the idea of this feature but it was not of high importance since it is still early days for the project. It would make more sense to implement it when there are potentially more users.
-
-### Custom 404 & 500 error page.
-This feature I really wanted to have but again did not have time to implement. It would really help with making the site more professional and understandable.
-
-### Defensive programming.
-There is definite room for improvement when it comes to this feature, more secure log ins, error handling & fallbacks & some way to handle form resubmission. This is something that will definitely be implemented in the future.
-
-### Display no results for search.
-At the moment if you search for a word that brings no results, the section for posts is blank. Ideally there would be a header displaying no results found but when I tried to implement this, I got a cursor error that indicated there was an issue further down the rabbit hole which I did not have time to investigate. Again, something that will be included in a future version of the site.
-
------
-
-## Database
-
-### Structure
-
-```
-{
-  "_id":                   <ObjectId>,
-  "post_title":            <string>,
-  "post_date":             <string>,
-  "edited_on":             <string>,
-  "post_preview":          <string>,
-  "post_content":          <string>,
-  "created_by":            <string>,
-  "photo_url":             <string>,
-  "profile_url":           <string>
-}
-```
-
-```
-{
-  "_id":                   <ObjectId>,
-  "firstname":             <string>,
-  "lastname":              <string>,
-  "username":              <string>,
-  "email":                 <string>,
-  "password":              <string>,
-  "photo_url":             <string>
-}
-```
-
-For this project I used MongoDB Atlas as the database choice since it is document oriented and serves the purpose of this site well. I had two collections within the database:
-
-#### Users
-This collection contains everything needed to identify a user. Their username and a link to their profile picture. The username is the main method of user authentication on the site.
-
-![screenshot of users mongoDB collection](https://res.cloudinary.com/ivanprojects/image/upload/v1614908539/send-it-images/Screenshot_2021-03-05_at_02.33.25_myeedt.png)
-
-#### Posts
-This collection contains everything that about a post, queried in most of the Flask views and used on most pages of the site. This collection goes hand in hand with the users collection to provide all the data for the site.
-
-![screenshot of posts mongoDB collection](https://res.cloudinary.com/ivanprojects/image/upload/v1614908539/send-it-images/Screenshot_2021-03-05_at_02.33.04_civq97.png)
+### Filtering for new/best sellers/most viewed products + Product sorting ascending/descending/by price
+As mentioned above, the store will not have many products available so these features were pushed to the back of the list. A good to have feature but not as necessary as others for this particular site.
 
 
+### Multiple images of product on product detail page
+This was a much wanted feature but one there was not enough time to implement. A second or third product image for users to look at on the product detail page would really increase the chances of a purchase or allow users to be more informed when deciding whether to make a purchase or not.
+
+### Generate links to similar items on product detail, bag, checkout and other pages
+This is another feature that is very common on other ecommerce sites, users being shown links to products that are similar to the ones they are currently looking at or have looked at. It didnt have so much of a priority since the site owners believed it could detract from the boutique small business feeling of the site. It is a feature that could be implemented though as the site and business grows.
+
+### Click to copy url share icon:
+This was a feature that would not have really solved a need or question since you can just copy a url in the address bar but it would have made it more convenient to just press a link and have the url copied automatically . This nature of the feature meant that it was deemed not a priority and time was given to other higher priority features.
+
+### Add product customisation notes to order line items
+The ability to add notes to products for customisation is a feature that the site owners believe they will need at some point in the future as their customer base grows but they want to push their core offerings as what they are for the time being.
+
+### Contact customers that have profiles
+Being able to contact customers that have created profiles would allow the site owners to market relevant products, discounts and other information to site users. This is again something they want functionality for in the future but for now they want the brand to expand more organically and want to make use of this feature when they have more of a customer base.
+
+### Custom 404 & 500 error page
+This feature would give users a more professional and well defined message which would reflect the site and brand better. Time and priority to other features is why this was not implemented.
+
+### Defensive Programming
+By implementing more defensive programming throughout the site, it would be protected from more security threats and errors which gives a smoother experience to the users and site owners. Time and priority to other features is why this was not implemented.
+
+### Reverse back to previous page on login
+If accessing login page from anywhere but home page, the site user would be redirected back to that page on eventual sign in. Time and priority to other features is why this was not implemented.
 
 -----
 
 ## Technologies Used
 
-- UI Kit – Front-end Framework
-- Google Fonts – Font choice.
-- tobiasahlin.com – Loading animation code.
-- MongoDB Atlas - Cloud Database.
-- GitHub Pages – Deployment.
-- Tinypng.com - Image compression.
-- Cloudinary - Cloud image hosting.
-- Python - Main Back-end language alongside:
-```click==7.1.2
-cloudinary==1.24.0
-dnspython==2.1.0
-Flask==1.1.2
-Flask-PyMongo==2.3.0
-itsdangerous==1.1.0
-pymongo==3.11.2
-Werkzeug==1.0.1
-```
-- Git - Version control
-- Heroku - Deployment
-- Gitpod - IDE of choice for this project.
-- email.js - Sending emails on contact form
+#### Front End
+- Bootstrap 5 inc. packaged javascript & Icons. - used for layout and various components.
+- jQuery - Used for bootstrap toasts & various other front-end interactive elements.
+- Mmenu.js, mhead.js & mburger.js - Off canvas nav with animated icon & pull down anytime header.
+- TinyMCE - WYSIWYG rich text editor.
+#### Back-End
+- Django - Main project framework
+- Python - Main backend language
+- Pip3 - Python package installer
+- SQLite - database used in development
+- PostgreSQL - database used in deployment
+- Stripe - used for handling payments
+- AWS S3 - Used for storage of static and media files for deployed site.
+
+#### Global
+- Gitpod - IDE used for project
+- Git - Version control 
+- Github - Hosting of project files
+- Heroku - Used for project deployment
+- Figma - Used for creating wireframes
+- Compressjpeg.com - Used for reducing image file size.
+- Coolors.co - used for generating colour palettes.
 
 -----
 
 ## Testing
 
-Testing documentation can be found [HERE](ms3_testing.md)
+Testing documentation can be found [HERE](ms4_testing.md)
 
 -----
 
@@ -371,78 +546,132 @@ Testing documentation can be found [HERE](ms3_testing.md)
 ### My Set Up
 My IDE of choice for this project was GitPod. I used the [Code Institute template](https://github.com/louparker/gitpod-full-template), by clicking on the green "use this template" link.
 
-After being directed to the create new repository from template page, I typed in the project name and clicked the create repository from template button. I then clicked on the GitPod button which was on the newly created repository page I was directed to. This created a GitpPd workspace based on the repository.
+After being directed to the create new repository from template page, I typed in the project name and clicked the create repository from template button. I then clicked on the GitPod button which was on the newly created repository page I was directed to. This created a GitPod workspace based on the repository.
+
+The project is being hosted live on heroku with AWS S3 hosting the static and media files. Git was used for version control while GitHub was used to host the project repository.
+
 
 ### Run Project Locally
 
-If you want to get this project up and running locally, you can follow these steps.
+In order to get the project up and running on your local machine, follow these steps.
+
 #### Requirements:
-- Python 3
+- Python3
+- Pip
 - Git
-- An IDE
-- A MongoDB Atlas Account
+- IDE of your choice
+- A Stripe account
+
 
 #### Step One, clone repository into local environment:
 
-1. Click this link to open the main repository page: [HERE](https://github.com/louparker/send-it-blog).
-2. click the code button
-3. copy the link you are given to your clipboard
-4. On your IDE of choice, open terminal and navigate to whichever directory you want the repository cloned to. Once in the desired directory, type `git clone`, then paste the URL copied from the Github repository. The command should look something like this:
+- Click this link to open the main repository page: [HERE](https://github.com/louparker/myochlinn).
+- Click the code button
+- Copy the link you are given to your clipboard
+- On your IDE of choice, open terminal and navigate to whichever directory you want the repository cloned to. Once in the desired directory, type `git clone`, then paste the URL copied from the Github repository. The command should look something like this:
 
-`git clone https://github.com/louparker/send-it-blog.git`
+`git clone https://github.com/louparker/myochlinn.git`
 
-5. press enter & you should have a local cloned version of the repository.
+- Press enter & you should have a local cloned version of the repository.
 
 
 
 #### Step 2, Install requirements:
-1. While you are still in the terminal, type `pip3 install -r requirements.txt`, this will install all the required softwares to run the project.
-2. You now need to set up the database with environment variables. Create a file titled `env.py` and make sure it is placed in the of this file structure, on the same level as the `app.py` file. Open the file and type the following lines:
+- While you are still in the terminal, type `pip3 install -r requirements.txt`, this will install all the required softwares to run the project.
+- You now need to set up the database with environment variables. Create a file titled `env.py` and make sure it is placed in the of this file structure, on the same level as the `app.py` file. Open the file and type the following lines:
 
 
-```import os
-
-os.environ.setdefault("IP", "0.0.0.0")
-os.environ.setdefault("PORT", "5000")
-os.environ.setdefault("SECRET_KEY", "")
- os.environ.setdefault("MONGO_URI", "")
-os.environ.setdefault("MONGO_DBNAME", "")
+```
+ os.environ.setdefault('SECRET_KEY', '<your_variable_here>')
+ os.environ.setdefault('DEVELOPMENT', 'True')
+ os.environ.setdefault('STRIPE_PUBLIC_KEY', '<your_variable_here>')
+ os.environ.setdefault('STRIPE_SECRET_KEY', '<your_variable_here>')
+ os.environ.setdefault('STRIPE_WH_SECRET_CH', '<your_variable_here>')
+ os.environ.setdefault('STRIPE_WH_SECRET_SUB', '<your_variable_here>')
 ```
 
-The `SECRET_KEY` is a value key of your own choice but it is recommended to be as secure as possible to password generators can be used. The `MONGO_URI` is to be taken from your mongo account. To find it, click on the overview button, then connect, then connect your application, its important to select the relevant python version for you. You can always check which version you are running within your IDE. The `MONGO_DBNAME` is whatever name you have given your database.
+- The `SECRET_KEY` is a value key of your own choice but it is recommended to be as secure as possible so it is recommended to use the Django secret key generator. `DEVELOPMENT` is true when the setup is local whereas it would be false if it was a remote setup with data being imported from outside the setup.
+ 
+- All `STRIPE` variables are taken from the stripe website and are needed to set up proper functioning payments and orders.
+- Once that is all set up, you are now ready to run the app. In the terminal, type python3 (depending on python version) manage.py runserver , this will run the python file and depending on your IDE should open a port and give you a link to access it through either an in-window preview or your browser.
 
-3. Once the database is set up, you are now ready to run the app. in the terminal, type `python3 app.py]` (depending on python version), this will run the python file and depending on your IDE should open a port and give you a link to access it through either an in-window preview or your browser. If that does not happen you can type `http://127.0.0.1:5000` in a browser window.
+### Heroku Deployment
 
-#### Heroku deployment:
+#### Requirements:
+- Heroku account
+- [AWS S3 Account set up](https://aws.amazon.com/s3/getting-started/)
 
-1. Go to heroku.com & sign in or create a user if you haven't got one already.
-2. Press the new button & click create a new app.
-3. Choose your app name and region (closest to where you live).
-4. At this stage you will want to set up the heroku app with the github repository. Click on the deploy tab and choose connect to github.
-5. From the search input that opens, search for your repository by name and click the search button.
-6. Once the desired repo has been found, press the connect button.
-7. You will then need to set the environment variables since the env.py file is not pushed to github. To do this, open the settings menu and click on the reveal config vars button.
-8. If you still have your IDE open, you can just copy the variables from the env.py file one by one. They would be:
-```key: IP, value: 0.0.0.0
-key: PORT, value: 5000
-key: MONGO_DBNAME, value: ""
-key: MONGO_URI, value: ""
-key: SECRET_KEY, value: ""
+In order to host static files and images with AWS, you will need to create an AWS account. Additionally, you have to create:
+
+- An AWS S3 Bucket
+- A Bucket Policy
+- A Group
+- An Access Policy
+- A User
+
+Links to help
+[HERE](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html)
+[HERE](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html)
+
+- Go to heroku.com & sign in or create a user if you haven't got one already.
+- Press the new button & click create a new app.
+- Choose your app name and region (closest to where you live).
+- At this stage you will want to set up the heroku app with the github repository. Click on the deploy tab and choose connect to github.
+- From the search input that opens, search for your repository by name and click the search button.
+
+- Once the desired repo has been found, press the connect button.
+- You will then need to set the environment variables since the env.py file is not pushed to github. To do this, open the settings menu and click on the reveal config vars button.
+
+- Go to the resources tab and search for Heroku Postgres. Choose the “hobby dev - free” option and submit the order form.
+- On the settings.py file, you will need to comment out the 'SQLite and Postgres databases' section and UNcomment the 'PostgreSQL Database' section. (this is temporary, nothing should be pushed/committed just yet). 
+- Add the database URL from Heroku & migrate your models to the PostgreSQL database with:
+ python3 manage.py migrate
+- You will then need to create a superuser which will be the credentials you use to log in to the admin page and manage the database. Type this in the terminal:
+
+ `python3 manage.py createsuperuser`
+
+- Fill in a username, password and email as required.
+- Back in the settings.py file, you can now delete the 'PostgreSQL Database' section and uncomment the 'SQLite and PostgreSQL Databases' section. This means that either database can now be used interchangeably.
+- Update the requirements.txt file to ensure a clean deployment with:
+
+ `pip3 freeze --local > requirements.txt`
+
+- Create a Procfile by inputting the following into the terminal:
+
+ `web: gunicorn <your_application_here>.wsgi:application`
+
+- You can now commit your changes and push to GitHub.
+- Copy the variables from the env.py file one by one into the heroku config vars. They would be:
+```
+key: 'SECRET_KEY', value: “your_variable_here”
+key: 'DEVELOPMENT', value: "True"
+key: 'STRIPE_PUBLIC_KEY', value: "your_variable_here"
+key: 'STRIPE_SECRET_KEY', value: "your_variable_here"
+key: 'STRIPE_WH_SECRET_CH', value: "your_variable_here"
+key: 'STRIPE_WH_SECRET_SUB', value: "your_variable_here"
 ```
 
-Make sure the values are exactly the same as the ones you have in the `env.py` file.
-9. At this stage you are ready to enable automatic deployment. You will want to push any changes you have made to github for convenience sake before you do this.
-10. Click on the deploy tab.
-11. Go down to the automatic deploy section & select the branch you intend to deploy.
-12. click enable automatic deploys. This will mean github is talking to heroku and whatever you push to github will be in you deployed heroku app.
-13. If there were any errors with the deployment, double check you have your Procfile and requirements file, if the requirements file is not there, you can type in your terminal `pip3 freeze > requirements.txt`. This will also make sure you have the most recent requirements pushed to GitHub & Heroku. If the Procfile is missing, you can type `echo web: python3 app.py > Procfile` (with a capital P).
+- Make sure the values are exactly the same as the ones you have in the env.py file.
+- You will also need some extra variables that you would need to properly connect to aws S3, these would be:
+```
+key: AWS_ACCESS_KEY_ID, value: "AWS access key ID"
+key: AWS_SECRET_ACCESS_KEY, value: "AWS secret access key"
+key: USE_AWS, value: "True"
+```
+
+- At this stage you are ready to enable automatic deployment. You will want to push any changes you have made to github for convenience sake before you do this.
+- Click on the deploy tab.
+- Go down to the automatic deploy section & select the branch you intend to deploy. 
+- click enable automatic deploys. This means github is talking to heroku and whatever you push to github will be in your deployed heroku app.
+- If there were any errors with the deployment, double check you have your Procfile and requirements file, if the requirements file is not there, you can type in your terminal pip3 freeze > requirements.txt. This will also make sure you have the most recent requirements pushed to GitHub & Heroku. If the Procfile is missing, you can type `echo "web: python3 app.py" > Procfile` (with a capital P).
+- You can now use the site admin to add products and blog posts to the site and the content media will be pushed to AWS for storage.
 
 ### Forking
 
 This is how you can "fork" the project without affecting the main branch. Which means you can change & edit it as a repository on your own GitHub profile.
 
 1. Log in to GitHub.
-2. Click on the following link to be taken to this repository's main page: [HERE](https://github.com/louparker/send-it-blog).
+2. Click on the following link to be taken to this repository's main page: [HERE](https://github.com/louparker/myochlinn).
 3. To the right of the repository name, you will see a "fork" button, click it.
 4. You will now have a copy of this repository on your own GitHub account.
 5. When you are done editing to your hearts content, you can click the "new pull request" button which allows the repository owner (me!) to include your work in the original project.
@@ -455,43 +684,30 @@ This is how you can "fork" the project without affecting the main branch. Which 
 All design, content and code (unless specified below) were created by myself.
 
 Specified code usage includes:
-- [MongoDB Documentation](https://docs.mongodb.com/manual/reference/)
+- [Django Documentation](https://docs.djangoproject.com/en/3.2/)
 - [Python3 Documentation](https://docs.python.org/3/contents.html)
-- [UI Kit Components & Documentation](https://getuikit.com/docs/introduction)
-- [EmailJS Documentation](https://www.emailjs.com/docs/)
-- [Google Fonts CSS import code](https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [mmenu.js](https://mmenujs.com/)
 - Code Institute Course Content
+- [Animations from hover.css](https://ianlunn.github.io/Hover/)
+- [Blog code from "Code with Stein"](https://codewithstein.com/build-a-simple-blog-using-django-3-in-under-20-minutes/)
+- [Stripe Documentation](https://stripe.com/docs)
+- [Checkout loading animation from Luke Haas](https://projects.lukehaas.me/css-loaders/)
+
 
 The following sites were used for beautifying, optimizing images and adding correct vendor prefixes to my code:
 - [Autoprefixer CSS](https://autoprefixer.github.io/)
 - [Code Beautify](https://codebeautify.org/)
 - [TinyPNG](https://tinypng.com/)
+- [CompressJPEG](https://compressjpeg.com/)
 
-Blog content & Images from these links:
+All product and homepage images from:
+[MonicaVinader.com](https://www.monicavinader.com/)
 
-- https://pitchfork.com/news/dave-chappelle-tests-positive-for-covid-19-cancels-texas-shows/
-- https://pitchfork.com/news/king-krule-covers-john-lennons-imagine-listen/
-- https://pitchfork.com/news/jazmine-sullivan-and-eric-church-to-sing-national-anthem-at-super-bowl-2021/
-- https://www.okayplayer.com/music/sza-new-album-interview.html
-- https://www.okayplayer.com/music/snoop-dogg-eminem-beef.html
-- https://www.okayplayer.com/music/jazmine-sullivan-heaux-tales-ep.html
-- https://www.okayplayer.com/music/best-verses-in-34-35-remix-ariana-grande-megan-thee-stallion-doja-cat.html
-- https://www.okayplayer.com/music/listen-dangelo-feverish-fantazmagoria-radio-show-stream.html
-- https://www.okayplayer.com/music/j-dilla-welcome-to-detroit-think-twice.html
-- https://www.okayplayer.com/music/joe-biden-inauguration-playlist.html
-- https://www.okayplayer.com/music/a-rare-instrumental-marvin-gaye-album-has-surfaced.html
-- https://pitchfork.com/news/watch-dangelos-verzuz-battle-live-at-the-apollo-theater/
+All blog images from:
+[simonewalsh.com](https://simonewalsh.com/)
 
-All other images from Unsplash:
-- [Clay Banks](https://unsplash.com/photos/LjqARJaJotc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
-- [Nikolai Chernichenko](https://res.cloudinary.com/ivanprojects/image/upload/v1614918078/send-it-images/hello_zsb4pf.jpg)
-- [Atikh Bana](https://unsplash.com/photos/2c0midsQKe0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
-- [Brooke Cagle](https://res.cloudinary.com/ivanprojects/image/upload/v1614918165/send-it-images/member4_a6pwyj.jpg)
-- [Anh Nguyen](https://unsplash.com/photos/z6PZ7ZH9MMQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
-- [Eye for Ebony](https://res.cloudinary.com/ivanprojects/image/upload/v1614820188/send-it-images/laura.jpg)
-- [Julian Myles](https://unsplash.com/photos/JRPu9rnNgH8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
-- [Clay Banks](https://unsplash.com/photos/LjqARJaJotc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
-- [Chase Fade](https://unsplash.com/photos/XOLIrILp-vI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
+All other images from Unsplash
 
 
 ### Acknowledgements
