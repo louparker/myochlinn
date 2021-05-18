@@ -87,7 +87,7 @@ Browser compatibility was checked using [BrowserStack](https://www.browserstack.
 |---------------------|-----------|----------|----------|----------|----------|----------|------------|-----------------|----------|----------|----------|-----------|-----------|----------------|----------------|
 |Renders As Expected? |PASS       |PASS      |PASS      |PASS      |PASS      |PASS      |PASS        |PASS             |PASS      |PASS      |PASS      |PASS       |PASS       |PASS            |PASS            |
 
-Testing was also done on a real life Iphone 11, a Samsung Galaxy S21 Ultra, an Ipad and a Macbook pro. The search icon displays with a strange border and bevel but everything works fine apart from that. The font on samsung & all android devices it seems did not want to update correctly when using a custom font. At this point the font was changed to a default one for continued and consistent ux and ui. 
+Testing was also done on a real life Iphone 11, a Samsung Galaxy S21 Ultra, an Ipad and a Macbook pro. The search icon displays with a strange border and bevel but everything works fine apart from that. The font on samsung & all android devices it seems did not want to update correctly when using a custom font. At this point the font was changed to a default one for continued and consistent ux and ui. This does not seem to have fixed the issue but it will continue to be investigated.
 
 -----
 
@@ -262,7 +262,7 @@ This is an issue with the external mburger.js plug-in that i am using for the of
 Due to the pagination functionality, the quantity in the ‘we found x products’ text is incorrect. It is only correct for the amount of items on that specific page but does not reflect the total amount of items within the current category. This is another bug that will be fixed at a later date in the interest of time and prioritising other issues.
 
 #### Font not correct on certain mobile devices - Status - ONGOING
-In my testing on android devices, the ‘Emberly Medium’ font seems to be not working as intended. Research into why this was happening lead me to include various different src font files in the css and static files directory. 
+In my testing on android devices, the ‘Emberly Medium’ font seems to be not working as intended. Research into why this was happening lead me to include various different src font files in the css and static files directory. Choosing to change font into a default font (Lucida Sans) seems to have also not fixed the issue, investigations will continue to understand what is causing this issue as it is a priority 
 
 #### The ‘X’ close icon on the off canvas menu does not do anything - Status - ONGOING
 The ‘x’ in the off canvas menu really should be a clickable link to close the menu, however I could not seem to get it to function in that way. The overall functionality is that a click anywhere outside the menu or a click of a menu item will automatically close it. However this removes the need for the ‘x’. For the time being I will not investigate more how to make the ‘x’ function properly or figure out how to remove it. It will be an issue to investigate further at a later date.
